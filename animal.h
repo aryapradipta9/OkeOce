@@ -5,13 +5,16 @@
 #define ANIMAL_H
 
 class Animal{
-
   public:
-    Animal();
-    ShowExperience();
+    Animal(); //ctor
+    Animal(const Animal&); //cctor
+    ~Animal(); //dtor
+    Animal& operator= (const Animal&); //operator=
+    ShowExperience(); // menampilkan experience setiap binatang
   protected:
-    const char* Exp;
-    const char* Family;
-    const char* Species;
+    char* AniType;
+    char* Exp;
+    char* Family;
+    char* Species;
 }
 #endif
