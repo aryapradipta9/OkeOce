@@ -8,6 +8,7 @@ public:
   Hominidae() : LandAnimal()
   {
     Animal::Famili = "Hominidae";
+    Animal::JenisMakanan = "Herbifor";
   }
 };
 #endif

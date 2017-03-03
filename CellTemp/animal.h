@@ -11,6 +11,9 @@ class Animal{
 			cout << Famili << endl;
 			cout << Species << endl;
 			cout << Experience << endl;
+			cout << JenisMakanan << endl;
+			cout << Makanan << endl;
+			cout << "Beratnya adalah" << Berat << endl;
 		}
 		//atype getanimal(int x,int y);	//type cell di x dan y
 		//void setanimal(int x, int y,atype a); //set type pada cell x dan y
@@ -19,5 +22,8 @@ class Animal{
 		string Famili;
 		string Species;
 		string Experience;//type dari facility
+		string JenisMakanan;
+		int Berat;
+		string Makanan;
 };
 #endif
