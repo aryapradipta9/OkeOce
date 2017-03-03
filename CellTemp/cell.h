@@ -6,6 +6,10 @@ class Cell
   public:
   Cell(){}
   ~Cell(){}
+  virtual bool isJalan()
+  {
+    return false;
+  }
   int GetX()
   {
     return x;
