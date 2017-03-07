@@ -19,5 +19,6 @@ int main()
   Animal* Jaki;
   Jaki = new Harambe();
   Jaki->GetExperience();
+  Jaki->FoodExp();
   return 0;
 }

@@ -1,7 +1,8 @@
 #ifndef HERBIFOR_H
 #define HERBIFOR_H
+#include "animal.h"
 
-class Herbifor
+class Herbifor : virtual public Animal
 {
 public:
   Herbifor()

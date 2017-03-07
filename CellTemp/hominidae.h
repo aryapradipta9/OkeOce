@@ -2,13 +2,12 @@
 #define HOMINIDAE_H
 #include "land_animal.h"
 
-class Hominidae : public LandAnimal
+class Hominidae : virtual public LandAnimal
 {
 public:
   Hominidae() : LandAnimal()
   {
     Animal::Famili = "Hominidae";
-    Animal::JenisMakanan = "Herbifor";
   }
 };
 #endif

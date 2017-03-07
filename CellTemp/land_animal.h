@@ -2,7 +2,7 @@
 #define LANDANIMAL_H
 #include "animal.h"
 
-class LandAnimal : public Animal
+class LandAnimal : virtual public Animal
 {
 public:
   LandAnimal() : Animal()
