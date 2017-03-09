@@ -1,8 +1,10 @@
 #ifndef CELL_H
 #define CELL_H
 #include "point.h"
+#include "entrance.h"
+#include "exit.h"
+#include "cage.h"
 
-//template <class Point>
 class Cell{
 	public:
 		Cell():size_x(50),size_y(50)
@@ -16,6 +18,9 @@ class Cell{
 			{
 				pos[i]=new Point*[size_x];
 			}
+      EmptyPos = size_x * size_y;
+      adaEntry = false;
+      adaExit = false;
 		}
 		Cell(int x, int y):size_x(x),size_y(y)
 		{
@@ -28,15 +33,59 @@ class Cell{
 			{
 				pos[i]=new Point*[size_x];
 			}
+      EmptyPos = size_x * size_y;
+      adaEntry = false;
+      adaExit = false;
 		}
-		~Cell()
-		{
-		}
+		~Cell() {}
+    void SetCellTarget(Point* F)
+    {
+      // harusnya ada pengaman tapi aing gatau gimana
+      // asumsi F sudah berisi koordinat yang tepat
+      pos[F->gety()][F->getx()] = F;
+      EmptyPos--;
+    }
+    void SetEntrance(Entrance* ent)
+    {
+      if (!adaEntry)
+      {
+        pos[ent->gety()][ent->getx()] = ent;
+        Masuk = ent;
+        adaEntry = true;
+        EmptyPos--;
+      }
+    }
+    void SetExit(Exit* ext)
+    {
+      if (!adaExit)
+      {
+        pos[ext->gety()][ext->getx()] = ext;
+        Keluar = ext;
+        adaExit = true;
+        EmptyPos--;
+      }
+    }
+    bool IsComplete()
+    // cek apakah semua pos telah terisi
+    {
+      return (((EmptyPos == 0) && adaEntry && adaExit) ? true : false);
+    }
+    Entrance* GetEntrance()
+    {
+      return (Masuk);
+    }
+    Exit* GetExit()
+    {
+      return (Keluar);
+    }
 		Cell(const Cell&);
 		Cell& operator=(const Cell&);
 		int getsize_x();	//ukuran x cell saat ini
 		int getsize_y();	//ukuran y cell saat ini
-		Point getdata(int x,int y);	//type cell di x dan y
+		Point* getdata(int x,int y)
+    {
+      return(pos[y][x]);
+    }	//type cell di x dan y
 		void setdata(int x, int y,Point* t) //set type pada cell x dan y
 		{
 			pos[x][y]=t;
@@ -45,9 +94,14 @@ class Cell{
 		const int size_x;	//ukuran x cell
 		const int size_y;	//ukuran y cell
 		Point*** pos;		//type dari cell
+    int EmptyPos;
+    Exit* Keluar;
+    bool adaExit;
+    Entrance* Masuk;
+    bool adaEntry;
 
     // array of Cage
     Cage* C;
-    
+
 };
 #endif

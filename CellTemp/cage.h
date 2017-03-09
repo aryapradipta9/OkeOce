@@ -1,9 +1,11 @@
 #ifndef CAGE_H
 #define CAGE_H
+#include "animal.h"
+#include "point.h"
 
 class Cage{
 	public:
-		Cage(int HabType, int x_cage, int y_cage, int JumlahAnimal, int LuasCage)//ctor
+		Cage(int HabType, int JumlahAnimal, int LuasCage)//ctor
 		{
 			this->LuasCage = LuasCage;
 			P = new Point[LuasCage]; //point buat setter
@@ -12,21 +14,27 @@ class Cage{
 			AniData = new Animal*[JumlahAnimal];
 			AniLoc = new Point[JumlahAnimal];
 			PointerAnimal = 0;
-			Kandang = new Point(x_cage,y_cage);
 		}
-		AddAnimal(Animal* Ani,Point pnt)
+		void AddAnimal(Animal* Ani,Point pnt)
 		{
 			// cek apakah bisa
 			AniData[PointerAnimal] = Ani;
 			// cek apakah point terletak dalam set of point
-			AniLoc[PointerAnimal].SetX(pnt.GetX());
-			AniLoc[PointerAnimal].SetY(pnt.GetY());
+			AniLoc[PointerAnimal].SetX(pnt.getx());
+			AniLoc[PointerAnimal].SetY(pnt.gety());
 			PointerAnimal++;
 		} // masukkin animal ke point tertentu;
-		Move(); // hewan nya bergerak
-		~Cage();//dtor
+
+		void Move(); // hewan nya bergerak
+		~Cage()
+		{
+			int i;
+			for (i = 0; i < PointerAnimal; i++) delete AniData[i];
+			delete [] AniData;
+			delete [] AniLoc;
+			delete [] P;
+		}//dtor
 	protected:
-		Cell* Kandang;
 		Animal** AniData; // array of animal
 		Point* AniLoc; // lokasi semua animal
 		int JumlahAnimal;
@@ -36,5 +44,3 @@ class Cage{
 		int PointerPoint;
 };
 #endif
-
-mggitbsekali

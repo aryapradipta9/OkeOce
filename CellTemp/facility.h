@@ -1,15 +1,15 @@
 #ifndef FACILITY_H
 #define FACILITY_H
-#include "cell.h"
+#include "point.h"
 using namespace std;
 
-class Facility : public Cell
+class Facility : public Point
 {
 public:
-  Facility(int posx, int posy) : Cell()
+  Facility(int posx, int posy) : Point()
   {
-    Cell::x = posx;
-    Cell::y = posy;
+    Point::x = posx;
+    Point::y = posy;
   }
 };
 #endif

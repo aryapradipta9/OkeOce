@@ -1,12 +1,14 @@
 #ifndef HABITAT_H
 #define HABITAT_H
+#include "point.h"
+using namespace std;
 
 class Habitat : public Point{
 	public:
-		Habitat(int posx, int posy) : Cell()
+		Habitat(int posx, int posy) : Point()
 		{
-			Cell::x = posx;
-			Cell::y = posy;
+			Point::x = posx;
+			Point::y = posy;
 		}
 		int get_x();	//dapat x
 		int get_y();	//dapat y

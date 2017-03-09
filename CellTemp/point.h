@@ -20,6 +20,14 @@ class Point{
 		{
 			return(y);
 		}
+		void SetX(int _X)
+		{
+			x = _X;
+		}
+		void SetY(int _Y)
+		{
+			y = _Y;
+		}
 	protected:
 		int x;
 		int y;

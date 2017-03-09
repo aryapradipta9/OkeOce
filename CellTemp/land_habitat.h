@@ -1,11 +1,12 @@
 #ifndef LANDHABITAT_H
 #define LANDHABITAT_H
+#include "habitat.h"
 
 class LandHabitat : public Habitat{
 	public:
-		LandHabitat()//ctor
+		LandHabitat(int posx, int posy) : Habitat(posx,posy)//ctor
 		{
-			HabType = 1;
+			Habitat::HabType = 1;
 		}
 		~LandHabitat();//dtor
 	protected:
