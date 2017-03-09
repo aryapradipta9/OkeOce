@@ -1,7 +1,7 @@
 #ifndef HABITAT_H
 #define HABITAT_H
 
-class Habitat : public Cell{
+class Habitat : public Point{
 	public:
 		Habitat(int posx, int posy) : Cell()
 		{
@@ -11,5 +11,6 @@ class Habitat : public Cell{
 		int get_x();	//dapat x
 		int get_y();	//dapat y
 	protected:
+		short HabType; // 1 land 2 air 3 water;
 };
 #endif
