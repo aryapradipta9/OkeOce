@@ -21,8 +21,11 @@ class Cell{
       EmptyPos = size_x * size_y;
       adaEntry = false;
       adaExit = false;
+			SizeCage = 50;
+			C = new Cage*[SizeCage];
+			TopCage = 0;
 		}
-		Cell(int x, int y):size_x(x),size_y(y)
+		Cell(int x, int y, int jumlahkandang):size_x(x),size_y(y)
 		{
 			//KAMUS
 			int i;
@@ -36,8 +39,17 @@ class Cell{
       EmptyPos = size_x * size_y;
       adaEntry = false;
       adaExit = false;
+			SizeCage = jumlahkandang;
+			C = new Cage*[SizeCage];
+			TopCage = 0;
 		}
-		~Cell() {}
+		virtual ~Cell() {}
+		void SetCage(Cage* cg)
+		{
+			C[TopCage] = cg;
+			C[TopCage]->SetCageNum(TopCage);
+			TopCage++;
+		}
     void SetCellTarget(Point* F)
     {
       // harusnya ada pengaman tapi aing gatau gimana
@@ -78,6 +90,14 @@ class Cell{
     {
       return (Keluar);
     }
+		void ViewCage(int NumCage)
+		{
+			C[NumCage]->ShowHewan();
+		}
+		void Jalan()
+		{
+			
+		}
 		Cell(const Cell&);
 		Cell& operator=(const Cell&);
 		int getsize_x();	//ukuran x cell saat ini
@@ -101,7 +121,9 @@ class Cell{
     bool adaEntry;
 
     // array of Cage
-    Cage* C;
+    Cage** C;
+		int TopCage;
+		int SizeCage;
 
 };
 #endif

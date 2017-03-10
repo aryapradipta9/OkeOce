@@ -8,7 +8,7 @@ class LandHabitat : public Habitat{
 		{
 			Habitat::HabType = 1;
 		}
-		~LandHabitat();//dtor
+		virtual ~LandHabitat(){};//dtor
 	protected:
 };
 #endif

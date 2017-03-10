@@ -7,7 +7,7 @@ class Point{
 		{
 
 		}
-		~Point()
+		virtual ~Point()
 		{
 
 		}

@@ -2,31 +2,32 @@
 #define CAGE_H
 #include "animal.h"
 #include "point.h"
+#include "habitat.h"
 
 class Cage{
 	public:
-		Cage(int HabType, int JumlahAnimal, int LuasCage)//ctor
+		Cage(int HabType, int JumlahAnimal, int MaxLuasCage)//ctor
 		{
-			this->LuasCage = LuasCage;
-			P = new Point[LuasCage]; //point buat setter
+			P = new Point[MaxLuasCage];
 			PointerPoint = 0;
 			this->JumlahAnimal = JumlahAnimal;
 			AniData = new Animal*[JumlahAnimal];
 			AniLoc = new Point[JumlahAnimal];
 			PointerAnimal = 0;
+			LuasCage = 0;
 		}
-		void AddAnimal(Animal* Ani,Point pnt)
+		void AddAnimal(Animal* Ani,int x, int y)
 		{
 			// cek apakah bisa
 			AniData[PointerAnimal] = Ani;
 			// cek apakah point terletak dalam set of point
-			AniLoc[PointerAnimal].SetX(pnt.getx());
-			AniLoc[PointerAnimal].SetY(pnt.gety());
+			AniLoc[PointerAnimal].SetX(x);
+			AniLoc[PointerAnimal].SetY(y);
 			PointerAnimal++;
 		} // masukkin animal ke point tertentu;
 
 		void Move(); // hewan nya bergerak
-		~Cage()
+		virtual ~Cage()
 		{
 			int i;
 			for (i = 0; i < PointerAnimal; i++) delete AniData[i];
@@ -34,6 +35,27 @@ class Cage{
 			delete [] AniLoc;
 			delete [] P;
 		}//dtor
+		void SetCageNum(int x)
+		{
+			CageNum = x;
+		}
+		void AddHabitat(Habitat* H)
+		{
+			H->SetCageNum(CageNum);
+			LuasCage++;
+			P[PointerPoint].SetX(H->getx());
+			P[PointerPoint].SetY(H->gety());
+			PointerPoint++;
+		}
+		void ShowHewan()
+		{
+			int i;
+			for(i = 0; i < PointerAnimal; i++)
+			{
+				AniData[i]->GetExperience();
+			}
+		}
+
 	protected:
 		Animal** AniData; // array of animal
 		Point* AniLoc; // lokasi semua animal
@@ -42,5 +64,6 @@ class Cage{
 		Point* P; // semua point cage berada
 		int LuasCage;
 		int PointerPoint;
+		int CageNum;
 };
 #endif
