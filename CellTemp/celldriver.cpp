@@ -67,7 +67,7 @@ int main()
   C[1]->ShowHewan();
   cout << C[1]->JumlahMakanKandang() << endl;
 
-  Zoo.Gambar();
+  Zoo.Tour();
 
 /*
   obj[0] = new Facility(x,y);

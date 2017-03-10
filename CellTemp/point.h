@@ -29,6 +29,14 @@ class Point : virtual public Renderable{
 		{
 			y = _Y;
 		}
+		virtual bool isJalan()
+		{
+			return false;
+		}
+		virtual bool isHabitat()
+		{
+			return false;
+		}
 	protected:
 		int x;
 		int y;

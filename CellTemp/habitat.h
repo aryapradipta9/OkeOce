@@ -20,6 +20,10 @@ class Habitat : public Point{
 		{
 			return CageNum;
 		}
+		virtual bool isHabitat()
+		{
+			return true;
+		}
 
 	protected:
 		short HabType; // 1 land 2 air 3 water;
