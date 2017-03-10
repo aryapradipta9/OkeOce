@@ -1,7 +1,8 @@
 #ifndef POINT_H
 #define POINT_H
+#include "renderable.h"
 
-class Point{
+class Point : virtual public Renderable{
 	public:
 		Point()
 		{

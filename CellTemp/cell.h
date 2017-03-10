@@ -4,6 +4,7 @@
 #include "entrance.h"
 #include "exit.h"
 #include "cage.h"
+#include "renderable.h"
 
 class Cell{
 	public:
@@ -96,7 +97,7 @@ class Cell{
 		}
 		void Jalan()
 		{
-			
+
 		}
 		Cell(const Cell&);
 		Cell& operator=(const Cell&);
@@ -109,6 +110,32 @@ class Cell{
 		void setdata(int x, int y,Point* t) //set type pada cell x dan y
 		{
 			pos[x][y]=t;
+		}
+		void Gambar()
+		{
+			int i, j;
+			char ** cc;
+			cc = new char*[size_y];
+			for(i=0; i<size_y;i++) cc[i] = new char[size_x];
+			for(i=0; i<size_y; i++)
+			{
+				for(j=0; j<size_x; j++)
+				{
+					pos[i][j]->render(cc);
+				}
+			}
+			for(i=0; i<TopCage; i++)
+			{
+				C[i]->render(cc);
+			}
+			for(i=0; i<size_y; i++)
+			{
+				for(j=0; j<size_x; j++)
+				{
+					cout << cc[i][j];
+				}
+				cout << endl;
+			}
 		}
 	protected:
 		const int size_x;	//ukuran x cell

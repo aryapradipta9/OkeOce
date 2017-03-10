@@ -20,6 +20,7 @@ class Habitat : public Point{
 		{
 			return CageNum;
 		}
+
 	protected:
 		short HabType; // 1 land 2 air 3 water;
 		int CageNum;// nomor kandang dalam cell;

@@ -13,5 +13,9 @@ public:
     Animal::Berat = 60;
     Animal::Makanan = "biji jaki";
   }
+  char GetRender()
+  {
+    return ('H');
+  }
 };
 #endif

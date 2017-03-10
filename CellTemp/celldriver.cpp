@@ -67,6 +67,8 @@ int main()
   C[1]->ShowHewan();
   cout << C[1]->JumlahMakanKandang() << endl;
 
+  Zoo.Gambar();
+
 /*
   obj[0] = new Facility(x,y);
   obj[1] = new Road(1,1);

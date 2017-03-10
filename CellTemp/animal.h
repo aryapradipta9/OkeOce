@@ -23,6 +23,7 @@ class Animal{
 			cout << Experience << endl;
 		}
 		virtual int GetFoodNum(){}
+		virtual char GetRender(){}
 		//atype getanimal(int x,int y);	//type cell di x dan y
 		//void setanimal(int x, int y,atype a); //set type pada cell x dan y
 	protected:

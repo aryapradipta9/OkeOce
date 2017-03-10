@@ -9,6 +9,10 @@ class LandHabitat : public Habitat{
 			Habitat::HabType = 1;
 		}
 		virtual ~LandHabitat(){};//dtor
+		void render(char** cc)
+		{
+			cc[Point::y][Point::x] = 'L';
+		}
 	protected:
 };
 #endif

@@ -4,7 +4,7 @@
 #include "point.h"
 #include "habitat.h"
 
-class Cage{
+class Cage : virtual public Renderable{
 	public:
 		Cage(int HabType, int JumlahAnimal, int MaxLuasCage)//ctor
 		{
@@ -64,6 +64,14 @@ class Cage{
 				temp = temp + AniData[i]->GetFoodNum();
 			}
 			return temp;
+		}
+		void render(char** cc)
+		{
+			// lakukan penimpaan animal
+			for(int i = 0; i < PointerAnimal; i++)
+			{
+				cc[AniLoc[i].gety()][AniLoc[i].getx()] = AniData[i]->GetRender();
+			}
 		}
 
 	protected:

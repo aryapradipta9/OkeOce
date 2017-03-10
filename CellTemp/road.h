@@ -12,5 +12,9 @@ public:
   {
     return true;
   }
+  void render(char** cc)
+  {
+    cc[Point::y][Point::x] = '-';
+  }
 };
 #endif
