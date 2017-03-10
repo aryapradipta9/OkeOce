@@ -65,6 +65,7 @@ int main()
   C[1]->AddHabitat(lh);
   C[1]->AddAnimal(Jaki,2,0);
   C[1]->ShowHewan();
+  cout << C[1]->JumlahMakanKandang() << endl;
 
 /*
   obj[0] = new Facility(x,y);

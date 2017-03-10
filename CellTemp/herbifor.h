@@ -7,17 +7,14 @@ class Herbifor : virtual public Animal
 public:
   Herbifor()
   {
-    JenisMakanan = "Herbifor";
+    Animal::JenisMakanan = 1;
   }
-  virtual void FoodExp()
+  virtual int GetFoodNum()
   {
-    cout << JenisMakanan << endl;
-    cout << Makanan << endl;
-    cout << "Beratnya adalah" << Berat << endl;
+    // rumus herbifor
+    return (Animal::Berat * 0.5);
   }
 protected:
-  string JenisMakanan;
-  int Berat;
-  string Makanan;
+
 };
 #endif

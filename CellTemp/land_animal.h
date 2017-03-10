@@ -7,7 +7,7 @@ class LandAnimal : virtual public Animal
 public:
   LandAnimal() : Animal()
   {
-    Animal::Type = "Land";
+    Animal::Type[0] = 1;
   }
 };
 #endif

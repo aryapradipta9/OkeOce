@@ -55,6 +55,16 @@ class Cage{
 				AniData[i]->GetExperience();
 			}
 		}
+		int JumlahMakanKandang()
+		{
+			// rumus herbifor beda dengan karnivor dengan omnifor
+			int temp = 0;
+			for (int i=0; i<PointerAnimal; i++)
+			{
+				temp = temp + AniData[i]->GetFoodNum();
+			}
+			return temp;
+		}
 
 	protected:
 		Animal** AniData; // array of animal

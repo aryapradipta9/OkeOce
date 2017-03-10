@@ -10,8 +10,8 @@ public:
   {
     Animal::Species = "Harambe";
     Animal::Experience = "I die, bitch";
-    Herbifor::Berat = 60;
-    Herbifor::Makanan = "biji jaki";
+    Animal::Berat = 60;
+    Animal::Makanan = "biji jaki";
   }
 };
 #endif
