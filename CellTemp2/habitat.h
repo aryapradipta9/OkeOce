@@ -9,15 +9,8 @@ class Habitat : public Point{
 		  *	@param posx posisi x
 		  *	@param posy posisi y
 		  */
-		Habitat(int posx, int posy) : Point();
-		/** @brief dapat x
-		  * @return posisi x
-		  */
-		int get_x();	
-		/** @brief dapat x
-		  * @return posisi x
-		  */
-		int get_y();	
+		Habitat(int posx, int posy);
+
 		/** @brief setcagenum
 		  * @param x nomor
 		  */

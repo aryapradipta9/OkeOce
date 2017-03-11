@@ -9,7 +9,7 @@ Karnifora::Karnifora()
 /** @brief Jumlah makanan tiap hewan
   * return jumlah makan
   */
-virtual int Karnifora::GetFoodNum()
+int Karnifora::GetFoodNum()
 {
 	// rumus Karnifora
 	return (Animal::Berat * 0.2);

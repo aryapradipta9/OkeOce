@@ -8,7 +8,7 @@ Point::Point()
 }
 /** @brief destructor
   */
-virtual Point::~Point()
+Point::~Point()
 {
 
 }
@@ -43,14 +43,14 @@ void Point::SetY(int _Y)
 /** @brief isJalan
   *	@return true jika jalan. false jika tidak.
   */
-virtual bool Point::isJalan()
+bool Point::isJalan()
 {
 	return false;
 }
 /** @brief isHabitat
   *	@return true jika habitat. false jika tidak.
   */
-virtual bool Point::isHabitat()
+bool Point::isHabitat()
 {
 	return false;
 }

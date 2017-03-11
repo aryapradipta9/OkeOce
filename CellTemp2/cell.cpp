@@ -49,7 +49,7 @@ Cell::Cell(int x, int y, int jumlahkandang):size_x(x),size_y(y)
 
 /** @brief Destructor
   */
-virtual Cell::~Cell() {}
+Cell::~Cell() {}
 
 /** @brief SetCage
   * @param cg nawn
@@ -121,7 +121,7 @@ Exit* Cell::GetExit()
 /** @brief Melihatkan kandang
   * @param nomor kandang
   */
-void Cel::ViewCage(int NumCage)
+void Cell::ViewCage(int NumCage)
 {
 	C[NumCage]->ShowHewan();
 }
@@ -277,23 +277,7 @@ Point* Cell::MoveBawah(Point* rd)
 	}
 	return retval;
 }
-/** @brief Copy Constructor
-  * @param cell&
-  */
-Cell::Cell(const Cell&);
-/** @brief operator=
-  * @param cell&
-  *	@return cell&
-  */
-Cell& Cell::operator=(const Cell&);
-/** @brief ukuran x
-  *	@return size x
-  */
-int Cell::getsize_x();	//ukuran x cell saat ini
-/** @brief ukuran y
-  *	@return size y
-  */
-int Cell::getsize_y();	//ukuran y cell saat ini
+
 /** @brief data di x,y
   * @param x posisi x
   * @param y posisi y

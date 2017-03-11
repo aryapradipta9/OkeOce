@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+using namespace std;
 
 class Animal{
 	//method public
@@ -35,8 +36,7 @@ class Animal{
 		  *	@return List Musuh
 		  */
 		char* GetEnemy();
-		//atype getanimal(int x,int y);	//type cell di x dan y
-		//void setanimal(int x, int y,atype a); //set type pada cell x dan y
+
 	protected:
 		/**	Type habitat hewan. 0 : darat, 1 : udara, 2 : air
 		  */

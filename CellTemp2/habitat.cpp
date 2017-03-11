@@ -9,14 +9,7 @@ Habitat::Habitat(int posx, int posy) : Point()
 	Point::x = posx;
 	Point::y = posy;
 }
-/** @brief dapat x
-  * @return posisi x
-  */
-int Habitat::get_x();	
-/** @brief dapat x
-  * @return posisi x
-  */
-int Habitat::get_y();	
+
 /** @brief setcagenum
   * @param x nomor
   */
@@ -34,7 +27,7 @@ int Habitat::GetCageNum()
 /** @brief apakah Habitat
   * @return true
   */
-virtual bool Habitat::isHabitat()
+bool Habitat::isHabitat()
 {
 	return true;
 }

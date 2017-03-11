@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include "animal.h"
-
+using namespace std;
 /** @brief Constructor
   */
 Animal::Animal()
@@ -11,14 +11,14 @@ Animal::Animal()
 }
 /** @brief Destructor
   */
-virtual Animal::~Animal()
+Animal::~Animal()
 {
 	delete [] Type;
 	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */
-virtual void Animal::GetExperience()
+void Animal::GetExperience()
 {
 	cout << "Hewan ini tinggal di : ";
 	if (Type[0]==1) cout << "darat ";
@@ -31,7 +31,7 @@ virtual void Animal::GetExperience()
 /** @brief Jumlah makanan
   *	@return Jumlah makanan
   */
-virtual int Animal::GetFoodNum()
+int Animal::GetFoodNum()
 {
 
 }
@@ -60,6 +60,3 @@ char* Animal::GetEnemy()
 {
 	return EnemyChar;
 }
-
-//atype getanimal(int x,int y);	//type cell di x dan y
-//void setanimal(int x, int y,atype a); //set type pada cell x dan y

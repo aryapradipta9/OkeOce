@@ -12,8 +12,8 @@ public:
 	  */
 	Restaurant(int posx, int posy);
 
-	/**	@brief render nawn
-		*	@param cc nawnnawn
+	/**	@brief render Mencetak ke matriks
+		*	@param cc matriks yang sudah terisi
 		*/
 	void render(char** cc);
 };

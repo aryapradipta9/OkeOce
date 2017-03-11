@@ -9,7 +9,7 @@ Omnifora::Omnifora()
 /** @brief Jumlah makanan tiap hewan
   * return jumlah makan
   */
-virtual int Omnifora::GetFoodNum()
+int Omnifora::GetFoodNum()
 {
 	// rumus Omnifora
 	return (Animal::Berat * 0.3);

@@ -1,4 +1,4 @@
-#include "entrace.h"
+#include "entrance.h"
 
 /**	@brief Jalan masuk
   *	@param posx posisi x

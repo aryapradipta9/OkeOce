@@ -1,5 +1,6 @@
 #ifndef CAGE_H
 #define CAGE_H
+#include <random>
 #include "animal.h"
 #include "point.h"
 #include "habitat.h"
@@ -32,7 +33,7 @@ class Cage : virtual public Renderable{
 		void SetCageNum(int x);
 
 		/** @brief Menambahkan Habitat
-		  *	@param H Habitat 
+		  *	@param H Habitat
 		  */
 		void AddHabitat(Habitat* H);
 
@@ -46,11 +47,13 @@ class Cage : virtual public Renderable{
 		int JumlahMakanKandang();
 
 		/** @brief Menambahkan Habitat
-		  *	@param cc Nawn 
+		  *	@param cc Nawn
 		  */
 		void render(char** cc);
 
 	protected:
+		bool IsInCage(int x, int y);
+		bool AdaAnimal(int x, int y);
 		/** Array Hewan
 		  */
 		Animal** AniData;
@@ -58,12 +61,12 @@ class Cage : virtual public Renderable{
 		  */
 		Point* AniLoc;
 		/** Jumlah Animal
-		  */ 
+		  */
 		int JumlahAnimal;
 		/** Pointer.0 pas inisialisasi.
 		  */
 		int PointerAnimal;
-		/** Semua point cage berada 
+		/** Semua point cage berada
 		  */
 		Point* P;
 		/** LuasCage

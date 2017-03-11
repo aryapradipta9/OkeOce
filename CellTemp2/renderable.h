@@ -4,8 +4,8 @@
 class Renderable
 {
 public:
-	/**	@brief nawnnnawn
-	  * @param cc nawn nawn
+	/**	@brief Kelas virtual render
+	  * @param cc matriks yang akan diprint
 	  */
 	virtual void render(char** cc);
 };

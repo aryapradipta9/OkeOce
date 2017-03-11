@@ -10,7 +10,7 @@ LandHabitat::LandHabitat(int posx, int posy) : Habitat(posx,posy)//ctor
 }
 /**	@brief Destructor
   */
-virtual LandHabitat::~LandHabitat(){}//dtor
+LandHabitat::~LandHabitat(){}//dtor
 /**	@brief render nawn
   *	@param cc nawnnawn
   */

@@ -57,7 +57,7 @@ class Cell{
 
 		/** @brief Gambar tanpa param
 		  */
-		void Gambar()
+		void Gambar();
 		/** @brief Gambar dengan param
 		  * @param rd lokasi sekarang
 		  */
@@ -125,7 +125,7 @@ class Cell{
 		/** @brief Total kebutuhan makanan dalam zoo
 		  *	@return jumlah makan
 		  */
-		int JumlahMakanCell()
+		int JumlahMakanCell();
 
 	protected:
 		/**	ukuran cell x

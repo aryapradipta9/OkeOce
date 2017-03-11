@@ -9,7 +9,7 @@ Road::Road(int posx, int posy) : Facility(posx,posy)
 /** @brief IsJalan
   * @return true jika jalan.
   */
-virtual bool Road::isJalan()
+bool Road::isJalan()
 {
 	return true;
 }

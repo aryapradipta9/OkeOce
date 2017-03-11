@@ -23,7 +23,7 @@ Cage::Cage(int HabType, int JumlahAnimal, int MaxLuasCage)
 void Cage::AddAnimal(Animal* Ani,int x, int y)
 {
 	// cek apakah bisa
-	if (JumlahAnimal<(LuasCage * 30)/100)
+	if (PointerAnimal<(LuasCage * 30)/100)
 	{
 		AniData[PointerAnimal] = Ani;
 		// cek apakah point terletak dalam set of point
@@ -33,15 +33,69 @@ void Cage::AddAnimal(Animal* Ani,int x, int y)
 	}
 } // masukkin animal ke point tertentu;
 
+bool Cage::IsInCage(int x, int y)
+{
+	bool ada = false;
+	int i = 0;
+	while ((!ada) && (i < PointerPoint))
+	{
+		if ((P[i].getx() == x) && (P[i].gety() == y))
+		{
+			ada = true;
+		}
+	}
+	return ada;
+}
+bool Cage::AdaAnimal(int x, int y)
+{
+	bool temp = IsInCage(x,y);
+	int i = 0;
+	while ((temp) && (i < PointerAnimal))
+	{
+		if ((P[i].getx() == x) && (P[i].gety() == y))
+		{
+			temp = false;
+		}
+	}
+	return temp;
+}
 /** @brief Gerak
   */
 void Cage::Move() // hewan nya bergerak
 {
-
+	// asumsi semua hewan bergerak
+	int movecommand, i;
+	for(i=0; i<JumlahAnimal; i++)
+	{
+		random_device rd;
+		mt19937 rng(rd());
+		uniform_int_distribution<long int> uni(0,3);
+		movecommand = uni(rng);
+		if (movecommand == 0) // ke kiri
+		{
+			if (!AdaAnimal(AniLoc[i].getx()-1,AniLoc[i].gety()))
+				AniLoc[i].SetX(AniLoc[i].getx() - 1);
+		}
+		else if (movecommand == 1) // ke kanan
+		{
+			if (!AdaAnimal(AniLoc[i].getx()+1,AniLoc[i].gety()))
+				AniLoc[i].SetX(AniLoc[i].getx() + 1);
+		}
+		else if (movecommand == 2) // ke kanan
+		{
+			if (!AdaAnimal(AniLoc[i].getx(),AniLoc[i].gety()-1))
+				AniLoc[i].SetY(AniLoc[i].gety() - 1);
+		}
+		else if (movecommand == 3) // ke kanan
+		{
+			if (!AdaAnimal(AniLoc[i].getx(),AniLoc[i].gety()+1))
+				AniLoc[i].SetY(AniLoc[i].gety() + 1);
+		}
+	}
 }
 /** @brief Destructor
   */
-virtual Cage::~Cage()
+  Cage::~Cage()
 {
 	int i;
 	for (i = 0; i < PointerAnimal; i++) delete AniData[i];
