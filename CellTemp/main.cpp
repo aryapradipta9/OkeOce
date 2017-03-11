@@ -1,4 +1,7 @@
+#include <cstdio>
 #include <iostream>
+#define clearScreen() printf("\033[H\033[J")
+
 #include "cell.h"
 #include "facility.h"
 #include "habitat.h"
@@ -63,17 +66,30 @@ int main()
   C[1]->AddAnimal(Jaki,2,0);
   C[1]->ShowHewan();
 
-  Zoo.Tour();
-
-/*
-  obj[0] = new Facility(x,y);
-  obj[1] = new Road(1,1);
-  cout << obj[0]->isJalan()<<endl;
-  cout << obj[1]->isJalan()<<endl;
-
-  Animal* Jaki;
-  Jaki = new Harambe();
-  Jaki->GetExperience();
-  Jaki->FoodExp();*/
+  // interface
+  clearScreen();
+  do
+  {
+    cout << "Selamat datang di YoxYox Zoo" << endl;
+    cout << "Menu yang tersedia : " << endl;
+    cout << "1. Display Virtual Zoo" << endl;
+    cout << "2. Tour Virtual Zoo" << endl;
+    cout << "3. Display Makanan Total" << endl;
+    cout << "4. Exit Zoo" << endl;
+    cout << endl << "Masukkan menu pilihan : ";
+    cin >> i;
+    if (i == 1)
+    {
+      Zoo.Gambar();
+    }
+    else if (i == 2)
+    {
+      Zoo.Tour();
+    }
+    else if (i == 3)
+    {
+      cout << "Jumlah makanan yang dibutuhkan adalah " << Zoo.JumlahMakanCell() << endl;
+    }
+  } while (i != 4);
   return 0;
 }

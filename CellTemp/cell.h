@@ -48,6 +48,15 @@ class Cell{
 			TopCage = 0;
 		}
 		virtual ~Cell() {}
+		int JumlahMakanCell()
+		{
+			int i, temp;
+			for (i = 0; i < TopCage; i++)
+			{
+				temp = temp + C[i]->JumlahMakanKandang();
+			}
+			return temp;
+		}
 		void SetCage(Cage* cg)
 		{
 			C[TopCage] = cg;
@@ -98,6 +107,33 @@ class Cell{
 		{
 			C[NumCage]->ShowHewan();
 		}
+		void Gambar()
+		{
+			int i, j;
+			char ** cc;
+			cc = new char*[size_y];
+			for(i=0; i<size_y;i++) cc[i] = new char[size_x];
+			for(i=0; i<size_y; i++)
+			{
+				for(j=0; j<size_x; j++)
+				{
+					pos[i][j]->render(cc);
+				}
+			}
+			for(i=0; i<TopCage; i++)
+			{
+				C[i]->render(cc);
+			}
+			for(i=0; i<size_y; i++)
+			{
+				for(j=0; j<size_x; j++)
+				{
+					cout << cc[i][j];
+				}
+				cout << endl;
+			}
+		}
+
 		void Gambar(Point* rd)
 		{
 			int i, j;
