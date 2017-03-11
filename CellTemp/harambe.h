@@ -11,11 +11,8 @@ public:
     Animal::Species = "Harambe";
     Animal::Experience = "I die, bitch";
     Animal::Berat = 60;
-    Animal::Makanan = "biji jaki";
-  }
-  char GetRender()
-  {
-    return ('H');
+    SetEnemy(Z); // menambahkan enemy z
+    Animal::AniChar = 'H';
   }
 };
 #endif

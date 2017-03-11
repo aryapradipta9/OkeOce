@@ -7,10 +7,12 @@ class Animal{
 		Animal()
 		{
 			Type = new int[3];
+			EnemyChar = new char[5];
 		}
 		virtual ~Animal()
 		{
 			delete [] Type;
+			delete [] EnemyChar;
 		}
 		virtual void GetExperience()
 		{
@@ -23,9 +25,21 @@ class Animal{
 			cout << Experience << endl;
 		}
 		virtual int GetFoodNum(){}
-		virtual char GetRender(){}
 		//atype getanimal(int x,int y);	//type cell di x dan y
 		//void setanimal(int x, int y,atype a); //set type pada cell x dan y
+		char GetRender()
+		{
+			return (AniChar);
+		}
+		void SetEnemy(char cc)
+		{
+			EnemyChar[TopEnemy] = cc;
+			cc++;
+		}
+		char* GetEnemy()
+		{
+			return EnemyChar;
+		}
 	protected:
 		int* Type; // 0 : darat, 1 : udara, 2 : air
 		string Famili;
@@ -34,5 +48,8 @@ class Animal{
 		short JenisMakanan; // 1 : herbifor, 2 : karnivor, 3 : omnifor
 	  int Berat;
 	  string Makanan;
+		char AniChar;
+		char* EnemyChar;
+		int TopEnemy;
 };
 #endif
