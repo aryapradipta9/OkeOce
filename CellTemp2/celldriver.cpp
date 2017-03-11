@@ -16,10 +16,6 @@ using namespace std;
 
 int main()
 {
-  fstream FILE("zoo.txt",r);
-  
-
-  /*
   Cell Zoo(3,3,2);
 
   // PEMBANGUNAN KEBUN BINATANG
