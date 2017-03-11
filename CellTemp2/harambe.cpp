@@ -10,6 +10,3 @@ Harambe::Harambe()
 	SetEnemy(Z); // menambahkan enemy z
 	Animal::AniChar = 'H';
 }
-/**	@brief Render
-  *	@return H
-  */

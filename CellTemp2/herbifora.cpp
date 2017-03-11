@@ -1,16 +1,16 @@
-#include "herbifor.h"
+#include "herbifora.h"
 
-/** @brief Inisialisasi Herbifor
+/** @brief Inisialisasi Herbifora
   */
-Herbifor::Herbifor()
+Herbifora::Herbifora()
 {
 	Animal::JenisMakanan = 1;
 }
 /** @brief Jumlah makanan tiap hewan
   * return jumlah makan
   */
-virtual int Herbifor::GetFoodNum()
+virtual int Herbifora::GetFoodNum()
 {
-	// rumus herbifor
+	// rumus Herbifora
 	return (Animal::Berat * 0.5);
 }
