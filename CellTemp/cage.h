@@ -19,11 +19,14 @@ class Cage : virtual public Renderable{
 		void AddAnimal(Animal* Ani,int x, int y)
 		{
 			// cek apakah bisa
-			AniData[PointerAnimal] = Ani;
-			// cek apakah point terletak dalam set of point
-			AniLoc[PointerAnimal].SetX(x);
-			AniLoc[PointerAnimal].SetY(y);
-			PointerAnimal++;
+			//if (((LuasCage * 30) / 100) > JumlahAnimal)
+			{
+				AniData[PointerAnimal] = Ani;
+				// cek apakah point terletak dalam set of point
+				AniLoc[PointerAnimal].SetX(x);
+				AniLoc[PointerAnimal].SetY(y);
+				PointerAnimal++;
+			}
 		} // masukkin animal ke point tertentu;
 
 		void Move(); // hewan nya bergerak

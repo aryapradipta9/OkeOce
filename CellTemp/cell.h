@@ -5,6 +5,9 @@
 #include "exit.h"
 #include "cage.h"
 #include "renderable.h"
+#include <cstdio>
+#include <iostream>
+#define clearScreen() printf("\033[H\033[J")
 
 class Cell{
 	public:
@@ -162,25 +165,28 @@ class Cell{
 		{
 			//awal di Entrance
 			Point* rd;
-			int i;
+			char i;
 			rd = Masuk;
 			while (rd != Keluar)
 			{
-
+				clearScreen();
+				cout << "Peta Jaki Zoo" << endl;
 				Gambar(rd);
+				cout << endl;
 				CheckSurrounding(rd);
-				cout << "Pilih jalan selanjutnya" << endl;
+				cout << endl<<"Pilih jalan selanjutnya : ";
 				cin >> i;
-				if (i == 0) rd = MoveKiri(rd);
-				else if (i == 1) rd = MoveKanan(rd);
-				else if (i == 2) rd = MoveAtas(rd);
-				else rd = MoveBawah(rd);
-								cout << rd->getx() << rd->gety() << endl;
+				if (i == 'l') rd = MoveKiri(rd);
+				else if (i == 'r') rd = MoveKanan(rd);
+				else if (i == 'u') rd = MoveAtas(rd);
+				else if (i == 'd') rd = MoveBawah(rd);
 			}
+			cout << "Terima kasih telah berkunjung ke jaki zoo" << endl;
 		}
 		Point* MoveKiri(Point* rd)
 		{
 			Point* retval = rd;
+			if (rd->getx()>0)
 			if (pos[rd->gety()][rd->getx()-1]->isJalan())
 			{
 				retval = pos[rd->gety()][rd->getx()-1];
@@ -190,6 +196,7 @@ class Cell{
 		Point* MoveKanan(Point* rd)
 		{
 			Point* retval = rd;
+			if (rd->getx()<(size_x-1))
 			if (pos[rd->gety()][rd->getx()+1]->isJalan())
 			{
 				retval = pos[rd->gety()][rd->getx()+1];
@@ -199,6 +206,7 @@ class Cell{
 		Point* MoveAtas(Point* rd)
 		{
 			Point* retval = rd;
+			if (rd->gety()>0)
 			if (pos[rd->gety()-1][rd->getx()]->isJalan())
 			{
 				retval = pos[rd->gety()-1][rd->getx()];
@@ -208,6 +216,7 @@ class Cell{
 		Point* MoveBawah(Point* rd)
 		{
 			Point* retval = rd;
+			if (rd->gety()<(size_y-1))
 			if (pos[rd->gety()+1][rd->getx()]->isJalan())
 			{
 				retval = pos[rd->gety()+1][rd->getx()];
