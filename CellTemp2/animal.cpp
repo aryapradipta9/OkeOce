@@ -7,12 +7,14 @@
 Animal::Animal()
 {
 	Type = new int[3];
+	EnemyChar = new char[5];
 }
 /** @brief Destructor
   */
 virtual Animal::~Animal()
 {
 	delete [] Type;
+	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */

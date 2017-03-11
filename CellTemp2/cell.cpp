@@ -1,4 +1,7 @@
 #include "cell.h"
+#include <cstdio>
+#include <iostream>
+#define clearScreen() printf("\033[H\033[J")
 
 /** @brief Constructor
   */
@@ -59,7 +62,7 @@ void Cell::SetCage(Cage* cg)
 }
 /** @brief SetCellTarge
   * @param F Nawn
-  */	
+  */
 void Cell::SetCellTarget(Point* F)
 {
 	// harusnya ada pengaman tapi aing gatau gimana
@@ -200,19 +203,21 @@ void Cell::Tour()
 {
 	//awal di Entrance
 	Point* rd;
-	int i;
+	char i;
 	rd = Masuk;
 	while (rd != Keluar)
 	{
-
+		clearScreen();
+		cout << "Peta Jaki Zoo" << endl;
 		Gambar(rd);
+		cout << endl;
 		CheckSurrounding(rd);
-		cout << "Pilih jalan selanjutnya" << endl;
+		cout <<endl<< "Pilih jalan selanjutnya : " ;
 		cin >> i;
-		if (i == 0) rd = MoveKiri(rd);
-		else if (i == 1) rd = MoveKanan(rd);
-		else if (i == 2) rd = MoveAtas(rd);
-		else rd = MoveBawah(rd);
+						if (i == 'l') rd = MoveKiri(rd);
+						else if (i == 'r') rd = MoveKanan(rd);
+						else if (i == 'u') rd = MoveAtas(rd);
+						else if (i == 'd') rd = MoveBawah(rd);
 						cout << rd->getx() << rd->gety() << endl;
 	}
 }
@@ -223,6 +228,7 @@ void Cell::Tour()
 Point* Cell::MoveKiri(Point* rd)
 {
 	Point* retval = rd;
+	if (rd->getx()>0)
 	if (pos[rd->gety()][rd->getx()-1]->isJalan())
 	{
 		retval = pos[rd->gety()][rd->getx()-1];
@@ -236,6 +242,7 @@ Point* Cell::MoveKiri(Point* rd)
 Point* Cell::MoveKanan(Point* rd)
 {
 	Point* retval = rd;
+	if (rd->getx()<(size_x-1))
 	if (pos[rd->gety()][rd->getx()+1]->isJalan())
 	{
 		retval = pos[rd->gety()][rd->getx()+1];
@@ -249,6 +256,7 @@ Point* Cell::MoveKanan(Point* rd)
 Point* Cell::MoveAtas(Point* rd)
 {
 	Point* retval = rd;
+	if (rd->gety()>0)
 	if (pos[rd->gety()-1][rd->getx()]->isJalan())
 	{
 		retval = pos[rd->gety()-1][rd->getx()];
@@ -262,6 +270,7 @@ Point* Cell::MoveAtas(Point* rd)
 Point* Cell::MoveBawah(Point* rd)
 {
 	Point* retval = rd;
+	if (rd->gety()<(size_y-1))
 	if (pos[rd->gety()+1][rd->getx()]->isJalan())
 	{
 		retval = pos[rd->gety()+1][rd->getx()];
@@ -301,4 +310,44 @@ Point* Cell::getdata(int x,int y)
 void Cell::setdata(int x, int y,Point* t) //set type pada cell x dan y
 {
 	pos[x][y]=t;
+}
+
+/** @brief Total kebutuhan makanan dalam zoo
+	*	@return jumlah makan
+	*/
+int Cell::JumlahMakanCell()
+{
+	int i, temp;
+	for (i = 0; i < TopCage; i++)
+	{
+		temp = temp + C[i]->JumlahMakanKandang();
+	}
+	return temp;
+}
+
+void Cell::Gambar()
+{
+	int i, j;
+	char ** cc;
+	cc = new char*[size_y];
+	for(i=0; i<size_y;i++) cc[i] = new char[size_x];
+	for(i=0; i<size_y; i++)
+	{
+		for(j=0; j<size_x; j++)
+		{
+			pos[i][j]->render(cc);
+		}
+	}
+	for(i=0; i<TopCage; i++)
+	{
+		C[i]->render(cc);
+	}
+	for(i=0; i<size_y; i++)
+	{
+		for(j=0; j<size_x; j++)
+		{
+			cout << cc[i][j];
+		}
+		cout << endl;
+	}
 }

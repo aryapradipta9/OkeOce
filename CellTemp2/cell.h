@@ -28,7 +28,7 @@ class Cell{
 		void SetCage(Cage* cg);
 		/** @brief SetCellTarge
 		  * @param F Nawn
-		  */	
+		  */
 		void SetCellTarget(Point* F);
 		/** @brief SetEntrace
 		  * @param ent Nawn
@@ -54,8 +54,12 @@ class Cell{
 		  * @param nomor kandang
 		  */
 		void ViewCage(int NumCage);
-		/** @brief Gambar
-		  * @param rd Nawn
+
+		/** @brief Gambar tanpa param
+		  */
+		void Gambar()
+		/** @brief Gambar dengan param
+		  * @param rd lokasi sekarang
 		  */
 		void Gambar(Point* rd);
 		/** @brief Lihat Habitat
@@ -117,6 +121,11 @@ class Cell{
 		  * @param y posisi y
 		  */
 		void setdata(int x, int y,Point* t);
+
+		/** @brief Total kebutuhan makanan dalam zoo
+		  *	@return jumlah makan
+		  */
+		int JumlahMakanCell()
 
 	protected:
 		/**	ukuran cell x
