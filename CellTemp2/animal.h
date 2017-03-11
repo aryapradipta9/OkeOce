@@ -21,11 +21,20 @@ class Animal{
 		  *	@return Jumlah makan
 		  */
 		virtual int GetFoodNum();
-		/** @brief Constructor
-		  *	@return char(?)
+		/** @brief Print karakter
+		  *	@return char
 		  */
-		virtual char GetRender();
-		
+		char GetRender();
+
+		/** @brief Set karakter hewan
+		  *	@param cc Karakter hewan tsb
+		  */
+		void SetEnemy(char cc);
+
+		/** @brief Ambil list musuh
+		  *	@return List Musuh
+		  */
+		char* GetEnemy();
 		//atype getanimal(int x,int y);	//type cell di x dan y
 		//void setanimal(int x, int y,atype a); //set type pada cell x dan y
 	protected:
@@ -50,5 +59,14 @@ class Animal{
 		/**	Nama makanan hewan
 		  */
 		string Makanan;
+		/**	Char yang digunakan untuk render
+		  */
+		char AniChar;
+		/**	Array of char yang berisi list musuhnya
+		  */
+		char* EnemyChar;
+		/**	Pointer EnemyChar yang available
+		  */
+		int TopEnemy;
 };
 #endif

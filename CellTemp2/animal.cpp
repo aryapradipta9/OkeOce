@@ -34,13 +34,30 @@ virtual int Animal::GetFoodNum()
 
 }
 
-/** @brief Constructor
-  * @return render(?)
-  */
-virtual char Animal::GetRender()
+/** @brief Print karakter
+	*	@return char
+	*/
+char Animal::GetRender()
 {
-
+	return (AniChar);
 }
-		
+
+/** @brief Set karakter hewan
+	*	@param cc Karakter hewan tsb
+	*/
+void Animal::SetEnemy(char cc)
+{
+	EnemyChar[TopEnemy] = cc;
+	cc++;
+}
+
+/** @brief Ambil list musuh
+	*	@return List Musuh
+	*/
+char* Animal::GetEnemy()
+{
+	return EnemyChar;
+}
+
 //atype getanimal(int x,int y);	//type cell di x dan y
 //void setanimal(int x, int y,atype a); //set type pada cell x dan y

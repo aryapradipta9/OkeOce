@@ -7,12 +7,9 @@ Harambe::Harambe()
 	Animal::Species = "Harambe";
 	Animal::Experience = "I die, bitch";
 	Animal::Berat = 60;
-	Animal::Makanan = "biji jaki";
+	SetEnemy(Z); // menambahkan enemy z
+	Animal::AniChar = 'H';
 }
 /**	@brief Render
   *	@return H
   */
-char Harambe::GetRender()
-{
-	return ('H');
-}
