@@ -4,7 +4,7 @@
   */
 Omnivora::Omnivora()
 {
-	Animal::JenisMakanan = 1;
+	Animal::JenisMakanan = 3;
 }
 /** @brief Jumlah makanan tiap hewan
   * return jumlah makan
