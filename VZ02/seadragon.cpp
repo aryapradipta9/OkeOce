@@ -7,6 +7,10 @@ using namespace std;
 Eagle::Eagle()
 {
 	Type = new int[3];
+	for(i=0;i<3;i++)
+	{
+		Type[i]=0;
+	}
 	EnemyChar = new char[5];
 	Species = "Aquila chrysaetos";
 	Experience = "screeech!";

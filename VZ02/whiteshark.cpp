@@ -7,6 +7,10 @@ using namespace std;
 WhiteShark::WhiteShark()
 {
 	Type = new int[3];
+	for(i=0;i<3;i++)
+	{
+		Type[i]=0;
+	}
 	EnemyChar = new char[5];
 	Species = "Carcharodon carcharias";
 	Experience = "It's a Big Shark";
