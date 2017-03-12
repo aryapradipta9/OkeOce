@@ -56,9 +56,6 @@ class Animal{
 		/**	Berat hewan
 		  */
 		int Berat;
-		/**	Nama makanan hewan
-		  */
-		string Makanan;
 		/**	Char yang digunakan untuk render
 		  */
 		char AniChar;

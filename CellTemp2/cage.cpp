@@ -23,7 +23,7 @@ Cage::Cage(int HabType, int JumlahAnimal, int MaxLuasCage)
 void Cage::AddAnimal(Animal* Ani,int x, int y)
 {
 	// cek apakah bisa
-	if (PointerAnimal<(LuasCage * 30)/100)
+	//if (PointerAnimal<(LuasCage * 30)/100)
 	{
 		AniData[PointerAnimal] = Ani;
 		// cek apakah point terletak dalam set of point

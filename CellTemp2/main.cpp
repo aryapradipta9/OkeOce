@@ -7,7 +7,8 @@
 #include "habitat.h"
 #include "road.h"
 #include "animal.h"
-
+#include "salamander.h"
+#include "cryptobranchidae.h"
 #include "land_animal.h"
 #include "land_habitat.h"
 #include "hominidae.h"
@@ -63,7 +64,9 @@ int main()
   C[1]->AddHabitat(lh);
   lh = dynamic_cast<LandHabitat*>(rd[6]);
   C[1]->AddHabitat(lh);
-  C[1]->AddAnimal(Jaki,2,0);
+  Animal* pler;
+  pler = new Salamander();
+  C[1]->AddAnimal(pler,2,0);
   C[1]->ShowHewan();
 
   // interface

@@ -1,9 +1,9 @@
 #ifndef HARAMBE_H
 #define HARAMBE_H
 #include "hominidae.h"
-#include "herbifora.h"
+#include "herbivora.h"
 
-class Harambe : public Hominidae, public Herbifora
+class Harambe : public Hominidae, public Herbivora
 {
 public:
 	/**	@brief Inisialisasi Hewan
