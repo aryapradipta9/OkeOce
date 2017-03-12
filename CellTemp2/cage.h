@@ -54,6 +54,7 @@ class Cage : virtual public Renderable{
 	protected:
 		bool IsInCage(int x, int y);
 		bool AdaAnimal(int x, int y);
+		bool BisaAddAnimal(Animal* Ani,int x, int y);
 		/** Array Hewan
 		  */
 		Animal** AniData;
@@ -64,7 +65,7 @@ class Cage : virtual public Renderable{
 		  */
 
 		int JumlahAnimal;
-		/** Jenis Habitat
+		/** Jenis Habitat, 0 : darat, 1 : udara, 2 : air
 			*/
 		int HabType;
 		/** Pointer.0 pas inisialisasi.

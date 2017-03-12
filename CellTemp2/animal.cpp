@@ -60,3 +60,16 @@ char* Animal::GetEnemy()
 {
 	return EnemyChar;
 }
+
+int Animal::GetTopEnemy()
+{
+	return TopEnemy;
+}
+
+/** @brief Ambil tipe habitat hewan
+	*	@return List habitat
+	*/
+	int* Animal::GetType()
+	{
+		return (Type);
+	}

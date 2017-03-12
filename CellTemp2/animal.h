@@ -37,7 +37,16 @@ class Animal{
 		  */
 		char* GetEnemy();
 
+		/** @brief Ambil tipe habitat hewan
+		  *	@return List habitat
+		  */
+			int* GetType();
+			/** @brief Ambil jumlah musuh
+				*	@return int musuh
+				*/
+			int GetTopEnemy();
 	protected:
+
 		/**	Type habitat hewan. 0 : darat, 1 : udara, 2 : air
 		  */
 		int* Type;

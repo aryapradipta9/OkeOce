@@ -24,7 +24,32 @@ Cage::Cage(int HabType, int JumlahAnimal, int MaxLuasCage)
 
 bool Cage::BisaAddAnimal(Animal* Ani,int x, int y)
 {
-	(PointerAnimal<(LuasCage * 30)/100
+	bool temp = false;
+	if (PointerAnimal<(LuasCage * 30)/100)
+	{
+		if ((Ani->GetType())[HabType] == 1)
+		{
+			temp = true;
+		}
+	}
+	if (temp)
+	{
+		int i, j;
+		char test;
+		for (j = 0; j < PointerAnimal; j++)
+		{
+			i = 0;
+			test = AniData[j]->GetRender();
+			while ((temp) && (i < Ani->GetTopEnemy()))
+			{
+				if ((Ani->GetEnemy())[i] == test)
+				{
+					temp = false;
+				}
+			}
+		}
+	}
+	return temp;
 }
 void Cage::AddAnimal(Animal* Ani,int x, int y)
 {
