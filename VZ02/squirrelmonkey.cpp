@@ -1,10 +1,10 @@
-#include "gorilla.h"
+#include "squirrelmonkey.h"
 #include <string>
 #include <iostream>
 using namespace std;
 /**	@brief Inisialisasi Hewan
   */
-Gorilla::Gorilla()
+SquirrelMonkey::SquirrelMonkey()
 {
 	int i;
 	Type = new int[3];
@@ -12,25 +12,24 @@ Gorilla::Gorilla()
 	{
 		Type[i]=0;
 	}
-	EnemyChar = new char[5];
-	Species = "Gorilla";
-	Experience = "There was a gorilla named Harambe";
-	Berat = 1600;
-	AniChar = 'T';
+	Species = "Saimiri sciureus";
+	Experience = "Squirrel monkey is a type of monkey that is very small";
+	Berat = 10;
+	AniChar = 'V';
 	Type[0] = 1;
-	Famili = "Hominidae";
+	Famili = "Cercopithecidae";
 	TopEnemy=0;
-	JenisMakanan = 1;
+	JenisMakanan = 2;
 }
 
-Gorilla::~Gorilla()
+SquirrelMonkey::~SquirrelMonkey()
 {
 	delete [] Type;
 	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */
-void Gorilla::GetExperience()
+void SquirrelMonkey::GetExperience()
 {
 	cout << "Hewan ini tinggal di : ";
 	if (Type[0]==1) cout << "darat ";
@@ -43,15 +42,15 @@ void Gorilla::GetExperience()
 /** @brief Jumlah makanan
   *	@return Jumlah makanan
   */
-int Gorilla::GetFoodNum()
+int SquirrelMonkey::GetFoodNum()
 {
-	return (Berat * 0.5);
+	return (Berat * 0.3);
 }
 
 /** @brief Print karakter
 	*	@return char
 	*/
-char Gorilla::GetRender()
+char SquirrelMonkey::GetRender()
 {
 	return (AniChar);
 }
@@ -59,7 +58,7 @@ char Gorilla::GetRender()
 /** @brief Set karakter hewan
 	*	@param cc Karakter hewan tsb
 	*/
-void Gorilla::SetEnemy(char cc)
+void SquirrelMonkey::SetEnemy(char cc)
 {
 	EnemyChar[TopEnemy] = cc;
 	TopEnemy++;
@@ -68,7 +67,7 @@ void Gorilla::SetEnemy(char cc)
 /** @brief Ambil list musuh
 	*	@return List Musuh
 	*/
-char* Gorilla::GetEnemy()
+char* SquirrelMonkey::GetEnemy()
 {
 	return EnemyChar;
 }

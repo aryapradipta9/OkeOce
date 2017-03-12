@@ -1,8 +1,10 @@
 #ifndef GORILLA_H
 #define GORILLA_H
 
-
-class Gorilla :
+#include <string>
+#include <iostream>
+using namespace std;
+class Gorilla
 {
 public:
 	/**	@brief Inisialisasi Hewan

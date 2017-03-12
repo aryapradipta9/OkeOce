@@ -1,18 +1,18 @@
-#ifndef BEAR_H
-#define BEAR_H
+#ifndef AFRICANELEPHANT_H
+#define AFRICANELEPHANT_H
 
 #include <string>
 #include <iostream>
 using namespace std;
-class Bear
+class AfricanElephant
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	Bear();
+	AfricanElephant();
 	/** @brief Destructor
 		  */
-	~Bear();
+	~AfricanElephant();
 	/** @brief Komunikasi dengan hewan
 		  */
 	void GetExperience();

@@ -1,18 +1,18 @@
-#ifndef BEAR_H
-#define BEAR_H
+#ifndef GIRRAFE_H
+#define GIRRAFE_H
 
 #include <string>
 #include <iostream>
 using namespace std;
-class Bear
+class Girrafe 
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	Bear();
+	Girrafe();
 	/** @brief Destructor
 		  */
-	~Bear();
+	~Girrafe();
 	/** @brief Komunikasi dengan hewan
 		  */
 	void GetExperience();

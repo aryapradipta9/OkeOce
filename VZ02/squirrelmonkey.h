@@ -1,18 +1,18 @@
-#ifndef BEAR_H
-#define BEAR_H
+#ifndef SQUIRRELMONKEY_H
+#define SQUIRRELMONKEY_H
 
 #include <string>
 #include <iostream>
 using namespace std;
-class Bear
+class SquirrelMonkey
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	Bear();
+	SquirrelMonkey();
 	/** @brief Destructor
 		  */
-	~Bear();
+	~SquirrelMonkey();
 	/** @brief Komunikasi dengan hewan
 		  */
 	void GetExperience();

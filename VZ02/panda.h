@@ -1,18 +1,18 @@
-#ifndef BEAR_H
-#define BEAR_H
+#ifndef PANDA_H
+#define PANDA_H
 
 #include <string>
 #include <iostream>
 using namespace std;
-class Bear
+class Panda
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	Bear();
+	Panda();
 	/** @brief Destructor
 		  */
-	~Bear();
+	~Panda();
 	/** @brief Komunikasi dengan hewan
 		  */
 	void GetExperience();

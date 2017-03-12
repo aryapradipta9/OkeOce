@@ -1,18 +1,18 @@
-#ifndef BEAR_H
-#define BEAR_H
+#ifndef ANOA_H
+#define ANOA_H
 
 #include <string>
 #include <iostream>
 using namespace std;
-class Bear
+class Anoa
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	Bear();
+	Anoa();
 	/** @brief Destructor
 		  */
-	~Bear();
+	~Anoa();
 	/** @brief Komunikasi dengan hewan
 		  */
 	void GetExperience();

@@ -1,10 +1,10 @@
-#include "gorilla.h"
+#include "rhino.h"
 #include <string>
 #include <iostream>
 using namespace std;
 /**	@brief Inisialisasi Hewan
   */
-Gorilla::Gorilla()
+Rhino::Rhino()
 {
 	int i;
 	Type = new int[3];
@@ -12,25 +12,24 @@ Gorilla::Gorilla()
 	{
 		Type[i]=0;
 	}
-	EnemyChar = new char[5];
-	Species = "Gorilla";
-	Experience = "There was a gorilla named Harambe";
-	Berat = 1600;
-	AniChar = 'T';
+	Species = " Ceratotherium simum";
+	Experience = "The rhino have a sharp horn";
+	Berat = 23000;
+	AniChar = 'N';
 	Type[0] = 1;
-	Famili = "Hominidae";
+	Famili = "Rhinocerotidae";
 	TopEnemy=0;
-	JenisMakanan = 1;
+	JenisMakanan = 2;
 }
 
-Gorilla::~Gorilla()
+Rhino::~Rhino()
 {
 	delete [] Type;
 	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */
-void Gorilla::GetExperience()
+void Rhino::GetExperience()
 {
 	cout << "Hewan ini tinggal di : ";
 	if (Type[0]==1) cout << "darat ";
@@ -43,15 +42,15 @@ void Gorilla::GetExperience()
 /** @brief Jumlah makanan
   *	@return Jumlah makanan
   */
-int Gorilla::GetFoodNum()
+int Rhino::GetFoodNum()
 {
-	return (Berat * 0.5);
+	return (Berat * 0.3);
 }
 
 /** @brief Print karakter
 	*	@return char
 	*/
-char Gorilla::GetRender()
+char Rhino::GetRender()
 {
 	return (AniChar);
 }
@@ -59,7 +58,7 @@ char Gorilla::GetRender()
 /** @brief Set karakter hewan
 	*	@param cc Karakter hewan tsb
 	*/
-void Gorilla::SetEnemy(char cc)
+void Rhino::SetEnemy(char cc)
 {
 	EnemyChar[TopEnemy] = cc;
 	TopEnemy++;
@@ -68,7 +67,7 @@ void Gorilla::SetEnemy(char cc)
 /** @brief Ambil list musuh
 	*	@return List Musuh
 	*/
-char* Gorilla::GetEnemy()
+char* Rhino::GetEnemy()
 {
 	return EnemyChar;
 }

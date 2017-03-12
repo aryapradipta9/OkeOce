@@ -1,5 +1,7 @@
 #include "bear.h"
-
+#include <string>
+#include <iostream>
+using namespace std;
 /**	@brief Inisialisasi Hewan
   */
 Bear::Bear()
