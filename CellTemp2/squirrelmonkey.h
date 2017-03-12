@@ -1,13 +1,13 @@
-#ifndef KINGCOBRA_H
-#define KINGCOBRA_H
-#include "elapidae.h"
-#include "karnivora.h"
+#ifndef SQUIRRELMONKEY_H
+#define SQUIRRELMONKEY_H
+#include "cercopithecidae.h"
+#include "herbivora.h"
 
-class KingCobra : public Elapidae, public Karnivora
+class SquirrelMonkey : public Cercopithecidae, public Herbivora
 {
 public:
 	/**	@brief Inisialisasi Hewan
 	  */
-	KingCobra();
+	SquirrelMonkey();
 };
 #endif
