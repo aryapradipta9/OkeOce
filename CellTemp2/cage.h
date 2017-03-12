@@ -62,7 +62,11 @@ class Cage : virtual public Renderable{
 		Point* AniLoc;
 		/** Jumlah Animal
 		  */
+
 		int JumlahAnimal;
+		/** Jenis Habitat
+			*/
+		int HabType;
 		/** Pointer.0 pas inisialisasi.
 		  */
 		int PointerAnimal;

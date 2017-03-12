@@ -14,16 +14,22 @@ Cage::Cage(int HabType, int JumlahAnimal, int MaxLuasCage)
 	AniLoc = new Point[JumlahAnimal];
 	PointerAnimal = 0;
 	LuasCage = 0;
+	this->HabType = HabType;
 }
 /** @brief Menambah Animal
   *	@param Ani Hewan
   *	@param X posisi X
   *	@param Y posisi Y
   */
+
+bool Cage::BisaAddAnimal(Animal* Ani,int x, int y)
+{
+	(PointerAnimal<(LuasCage * 30)/100
+}
 void Cage::AddAnimal(Animal* Ani,int x, int y)
 {
 	// cek apakah bisa
-	//if (PointerAnimal<(LuasCage * 30)/100)
+	if (BisaAddAnimal(Ani,x,y))
 	{
 		AniData[PointerAnimal] = Ani;
 		// cek apakah point terletak dalam set of point

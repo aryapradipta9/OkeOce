@@ -50,7 +50,7 @@ char Animal::GetRender()
 void Animal::SetEnemy(char cc)
 {
 	EnemyChar[TopEnemy] = cc;
-	cc++;
+	TopEnemy++;
 }
 
 /** @brief Ambil list musuh
