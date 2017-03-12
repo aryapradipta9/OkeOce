@@ -302,6 +302,7 @@ void Cell::setdata(int x, int y,Point* t) //set type pada cell x dan y
 int Cell::JumlahMakanCell()
 {
 	int i, temp;
+	temp = 0;
 	for (i = 0; i < TopCage; i++)
 	{
 		temp = temp + C[i]->JumlahMakanKandang();

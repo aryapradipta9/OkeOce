@@ -94,5 +94,6 @@ int main()
       cout << "Jumlah makanan yang dibutuhkan adalah " << Zoo.JumlahMakanCell() << endl;
     }
   } while (i != 4);
+  delete [] rd;
   return 0;
 }
