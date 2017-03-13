@@ -12,6 +12,7 @@ Panda::Panda()
 	{
 		Type[i]=0;
 	}
+	EnemyChar = new char[5];
 	Species = "Ailuropoda melanoleuca";
 	Experience = "The panda is eating bamboos";
 	Berat = 900;

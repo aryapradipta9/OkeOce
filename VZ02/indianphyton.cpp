@@ -7,6 +7,7 @@ using namespace std;
 IndianPhyton::IndianPhyton()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ IndianPhyton::IndianPhyton()
 	Experience = "Hssssssh!";
 	Berat = 30;
 	AniChar = 'a';
-	Famili = 'Phytonidae';
+	Famili = "Phytonidae";
 	JenisMakanan = 2;
 	Type[0] = 1;
 	TopEnemy = 0;

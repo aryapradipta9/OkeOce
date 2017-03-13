@@ -4,8 +4,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-class Tiger
-{
+class Tiger{
 public:
 	/**	@brief Inisialisasi Hewan
 	  */

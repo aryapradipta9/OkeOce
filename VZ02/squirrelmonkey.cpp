@@ -12,6 +12,7 @@ SquirrelMonkey::SquirrelMonkey()
 	{
 		Type[i]=0;
 	}
+	EnemyChar = new char[5];
 	Species = "Saimiri sciureus";
 	Experience = "Squirrel monkey is a type of monkey that is very small";
 	Berat = 10;

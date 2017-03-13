@@ -12,6 +12,7 @@ Rhino::Rhino()
 	{
 		Type[i]=0;
 	}
+	EnemyChar = new char[5];
 	Species = " Ceratotherium simum";
 	Experience = "The rhino have a sharp horn";
 	Berat = 23000;

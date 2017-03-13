@@ -12,6 +12,7 @@ Tiger::Tiger()
 	{
 		Type[i]=0;
 	}
+	EnemyChar = new char[5];
 	Species = "Panthera tigris tigris";
 	Experience = "ROAR!";
 	Berat = 2000;

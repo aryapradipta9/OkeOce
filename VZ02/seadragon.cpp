@@ -1,10 +1,10 @@
 #include <string>
 #include <iostream>
-#include "eagle.h"
+#include "seadragon.h"
 using namespace std;
 /** @brief Constructor
   */
-Eagle::Eagle()
+SeaDragon::SeaDragon()
 {
 	Type = new int[3];
 	int i;
@@ -26,14 +26,14 @@ Eagle::Eagle()
 }
 /** @brief Destructor
   */
-Eagle::~Eagle()
+SeaDragon::~SeaDragon()
 {
 	delete [] Type;
 	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */
-void Eagle::GetExperience()
+void SeaDragon::GetExperience()
 {
 	cout << "Hewan ini tinggal di : ";
 	if (Type[0]==1) cout << "darat ";
@@ -46,7 +46,7 @@ void Eagle::GetExperience()
 /** @brief Jumlah makanan
   *	@return Jumlah makanan
   */
-int Eagle::GetFoodNum()
+int SeaDragon::GetFoodNum()
 {
 	return (Berat * 0.2);
 }
@@ -54,7 +54,7 @@ int Eagle::GetFoodNum()
 /** @brief Print karakter
 	*	@return char
 	*/
-char Eagle::GetRender()
+char SeaDragon::GetRender()
 {
 	return (AniChar);
 }
@@ -62,7 +62,7 @@ char Eagle::GetRender()
 /** @brief Set karakter hewan
 	*	@param cc Karakter hewan tsb
 	*/
-void Eagle::SetEnemy(char cc)
+void SeaDragon::SetEnemy(char cc)
 {
 	EnemyChar[TopEnemy] = cc;
 	TopEnemy++;
@@ -71,7 +71,7 @@ void Eagle::SetEnemy(char cc)
 /** @brief Ambil list musuh
 	*	@return List Musuh
 	*/
-char* Eagle::GetEnemy()
+char* SeaDragon::GetEnemy()
 {
 	return EnemyChar;
 }
