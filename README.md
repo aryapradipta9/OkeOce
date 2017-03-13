@@ -1,3 +1,2 @@
 # OkeOce
-Arya biji naga
-Biji Arya meledak
+VZ02 KURANG BANYAK
