@@ -1,38 +1,137 @@
 #include <cstdio>
 #include <iostream>
 #define clearScreen() printf("\033[H\033[J")
-
-#include "cell.h"
-#include "facility.h"
-#include "habitat.h"
-#include "road.h"
-#include "animal.h"
-#include "salamander.h"
-#include "cryptobranchidae.h"
-#include "land_animal.h"
-#include "land_habitat.h"
-#include "hominidae.h"
-#include "harambe.h"
-#include "entrance.h"
-#include "exit.h"
-#include "cage.h"
-
+#include "incl.h"
 using namespace std;
 
 int main()
 {
-  Cell Zoo(3,3,2);
+  Cell Zoo(14,18,16);
 
   // PEMBANGUNAN KEBUN BINATANG
   // bangkitkan jalan
 
   Entrance* ent;
-  ent = new Entrance(0,0);
-  cout << ent->getx() << endl;
+  ent = new Entrance(7,0);
   Zoo.SetEntrance(ent);
   Exit* ext;
-  ext = new Exit(2,2);
+  ext = new Exit(6,13);
   Zoo.SetExit(ext);
+
+  // bangkitkan road
+  point* ptemp;
+  ptemp = new Road(7,1);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(7,2);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(7,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(7,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(6,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(5,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(4,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(4,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(3,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(2,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(2,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(2,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(1,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(8,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(9,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(9,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,6);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,7);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,8);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(9,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(8,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(7,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(6,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(5,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(5,10);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(5,11);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(5,12);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(6,12);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(4,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(4,10);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(3,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(2,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(1,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(0,9);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(10,10);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,10);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,11);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,12);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(12,12);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(13,12);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(13,13);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,2);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,1);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(11,0);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(12,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(13,5);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(13,4);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(13,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(14,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(15,3);
+  Zoo.SetCellTarget(ptemp);
+  ptemp = new Road(16,3);
+  Zoo.SetCellTarget(ptemp);
 
   Point** rd;
   rd = new Point*[7];

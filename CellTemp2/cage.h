@@ -8,17 +8,17 @@
 class Cage : virtual public Renderable{
 	public:
 		/** @brief Constructor
-		  *	@param HabType tipe habitat.
-		  *	@param JumlahAnimal.
+		  *	@param hab_type tipe habitat.
+		  *	@param jumlah_animal.
 		  *	@param MaxLuasCage
 		  */
-		Cage(int HabType, int JumlahAnimal, int MaxLuasCage);
+		Cage(int hab_type, int jumlah_animal, int MaxLuasCage);
 		/** @brief Menambah Animal ke point tertentu
-		  *	@param Ani Hewan
+		  *	@param ani Hewan
 		  *	@param X posisi X
 		  *	@param Y posisi Y
 		  */
-		void AddAnimal(Animal* Ani,int x, int y);
+		void AddAnimal(Animal* ani,int x, int y);
 
 		/** @brief Gerak
 		  */
@@ -33,9 +33,9 @@ class Cage : virtual public Renderable{
 		void SetCageNum(int x);
 
 		/** @brief Menambahkan Habitat
-		  *	@param H Habitat
+		  *	@param h Habitat
 		  */
-		void AddHabitat(Habitat* H);
+		void AddHabitat(Habitat* h);
 
 		/** @brief Menunjukkan Hewan
 		  */
@@ -49,39 +49,39 @@ class Cage : virtual public Renderable{
 		/** @brief Menambahkan Habitat
 		  *	@param cc Nawn
 		  */
-		void render(char** cc);
+		void Render(char** cc);
 
 	protected:
 		bool IsInCage(int x, int y);
 		bool AdaAnimal(int x, int y);
-		bool BisaAddAnimal(Animal* Ani,int x, int y);
+		bool BisaAddAnimal(Animal* ani,int x, int y);
 		/** Array Hewan
 		  */
-		Animal** AniData;
+		Animal** ani_data;
 		/** Lokasi semua animal
 		  */
-		Point* AniLoc;
+		Point* ani_loc;
 		/** Jumlah Animal
 		  */
 
-		int JumlahAnimal;
+		int jumlah_animal;
 		/** Jenis Habitat, 0 : darat, 1 : udara, 2 : air
 			*/
-		int HabType;
+		int hab_type;
 		/** Pointer.0 pas inisialisasi.
 		  */
-		int PointerAnimal;
+		int pointer_animal;
 		/** Semua point cage berada
 		  */
-		Point* P;
-		/** LuasCage
+		Point* p;
+		/** luas_cage
 		  */
-		int LuasCage;
-		/** PointerPoint
+		int luas_cage;
+		/** pointer_point
 		  */
-		int PointerPoint;
+		int pointer_point;
 		/** Jumlahcage
 		  */
-		int CageNum;
+		int cage_num;
 };
 #endif

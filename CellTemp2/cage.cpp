@@ -1,33 +1,33 @@
 #include "cage.h"
 
 /** @brief Constructor
-  *	@param HabType tipe habitat.
-  *	@param JumlahAnimal.
+  *	@param hab_type tipe habitat.
+  *	@param jumlah_animal.
   *	@param MaxLuasCage
   */
-Cage::Cage(int HabType, int JumlahAnimal, int MaxLuasCage)
+Cage::Cage(int hab_type, int jumlah_animal, int MaxLuasCage)
 {
-	P = new Point[MaxLuasCage];
-	PointerPoint = 0;
-	this->JumlahAnimal = JumlahAnimal;
-	AniData = new Animal*[JumlahAnimal];
-	AniLoc = new Point[JumlahAnimal];
-	PointerAnimal = 0;
-	LuasCage = 0;
-	this->HabType = HabType;
+	p = new Point[MaxLuasCage];
+	pointer_point = 0;
+	this->jumlah_animal = jumlah_animal;
+	ani_data = new Animal*[jumlah_animal];
+	ani_loc = new Point[jumlah_animal];
+	pointer_animal = 0;
+	luas_cage = 0;
+	this->hab_type = hab_type;
 }
 /** @brief Menambah Animal
-  *	@param Ani Hewan
+  *	@param ani Hewan
   *	@param X posisi X
   *	@param Y posisi Y
   */
 
-bool Cage::BisaAddAnimal(Animal* Ani,int x, int y)
+bool Cage::BisaAddAnimal(Animal* ani,int x, int y)
 {
 	bool temp = false;
-	if (PointerAnimal<(LuasCage * 30)/100)
+	if (pointer_animal<(luas_cage * 30)/100)
 	{
-		if ((Ani->GetType())[HabType] == 1)
+		if ((ani->GetType())[hab_type] == 1)
 		{
 			temp = true;
 		}
@@ -36,13 +36,13 @@ bool Cage::BisaAddAnimal(Animal* Ani,int x, int y)
 	{
 		int i, j;
 		char test;
-		for (j = 0; j < PointerAnimal; j++)
+		for (j = 0; j < pointer_animal; j++)
 		{
 			i = 0;
-			test = AniData[j]->GetRender();
-			while ((temp) && (i < Ani->GetTopEnemy()))
+			test = ani_data[j]->GetRender();
+			while ((temp) && (i < ani->GetTopEnemy()))
 			{
-				if ((Ani->GetEnemy())[i] == test)
+				if ((ani->GetEnemy())[i] == test)
 				{
 					temp = false;
 				}
@@ -51,16 +51,16 @@ bool Cage::BisaAddAnimal(Animal* Ani,int x, int y)
 	}
 	return temp;
 }
-void Cage::AddAnimal(Animal* Ani,int x, int y)
+void Cage::AddAnimal(Animal* ani,int x, int y)
 {
 	// cek apakah bisa
-	if (BisaAddAnimal(Ani,x,y))
+	if (BisaAddAnimal(ani,x,y))
 	{
-		AniData[PointerAnimal] = Ani;
+		ani_data[pointer_animal] = ani;
 		// cek apakah point terletak dalam set of point
-		AniLoc[PointerAnimal].SetX(x);
-		AniLoc[PointerAnimal].SetY(y);
-		PointerAnimal++;
+		ani_loc[pointer_animal].SetX(x);
+		ani_loc[pointer_animal].SetY(y);
+		pointer_animal++;
 	}
 } // masukkin animal ke point tertentu;
 
@@ -68,9 +68,9 @@ bool Cage::IsInCage(int x, int y)
 {
 	bool ada = false;
 	int i = 0;
-	while ((!ada) && (i < PointerPoint))
+	while ((!ada) && (i < pointer_point))
 	{
-		if ((P[i].getx() == x) && (P[i].gety() == y))
+		if ((p[i].getx() == x) && (p[i].gety() == y))
 		{
 			ada = true;
 		}
@@ -81,9 +81,9 @@ bool Cage::AdaAnimal(int x, int y)
 {
 	bool temp = IsInCage(x,y);
 	int i = 0;
-	while ((temp) && (i < PointerAnimal))
+	while ((temp) && (i < pointer_animal))
 	{
-		if ((P[i].getx() == x) && (P[i].gety() == y))
+		if ((p[i].getx() == x) && (p[i].gety() == y))
 		{
 			temp = false;
 		}
@@ -96,7 +96,7 @@ void Cage::Move() // hewan nya bergerak
 {
 	// asumsi semua hewan bergerak
 	int movecommand, i;
-	for(i=0; i<JumlahAnimal; i++)
+	for(i=0; i<jumlah_animal; i++)
 	{
 		random_device rd;
 		mt19937 rng(rd());
@@ -104,23 +104,23 @@ void Cage::Move() // hewan nya bergerak
 		movecommand = uni(rng);
 		if (movecommand == 0) // ke kiri
 		{
-			if (!AdaAnimal(AniLoc[i].getx()-1,AniLoc[i].gety()))
-				AniLoc[i].SetX(AniLoc[i].getx() - 1);
+			if (!AdaAnimal(ani_loc[i].getx()-1,ani_loc[i].gety()))
+				ani_loc[i].SetX(ani_loc[i].getx() - 1);
 		}
 		else if (movecommand == 1) // ke kanan
 		{
-			if (!AdaAnimal(AniLoc[i].getx()+1,AniLoc[i].gety()))
-				AniLoc[i].SetX(AniLoc[i].getx() + 1);
+			if (!AdaAnimal(ani_loc[i].getx()+1,ani_loc[i].gety()))
+				ani_loc[i].SetX(ani_loc[i].getx() + 1);
 		}
 		else if (movecommand == 2) // ke kanan
 		{
-			if (!AdaAnimal(AniLoc[i].getx(),AniLoc[i].gety()-1))
-				AniLoc[i].SetY(AniLoc[i].gety() - 1);
+			if (!AdaAnimal(ani_loc[i].getx(),ani_loc[i].gety()-1))
+				ani_loc[i].SetY(ani_loc[i].gety() - 1);
 		}
 		else if (movecommand == 3) // ke kanan
 		{
-			if (!AdaAnimal(AniLoc[i].getx(),AniLoc[i].gety()+1))
-				AniLoc[i].SetY(AniLoc[i].gety() + 1);
+			if (!AdaAnimal(ani_loc[i].getx(),ani_loc[i].gety()+1))
+				ani_loc[i].SetY(ani_loc[i].gety() + 1);
 		}
 	}
 }
@@ -129,10 +129,10 @@ void Cage::Move() // hewan nya bergerak
   Cage::~Cage()
 {
 	int i;
-	for (i = 0; i < PointerAnimal; i++) delete AniData[i];
-	delete [] AniData;
-	delete [] AniLoc;
-	delete [] P;
+	for (i = 0; i < pointer_animal; i++) delete ani_data[i];
+	delete [] ani_data;
+	delete [] ani_loc;
+	delete [] p;
 }//dtor
 
 /** @brief JumlahCage
@@ -140,19 +140,19 @@ void Cage::Move() // hewan nya bergerak
   */
 void Cage::SetCageNum(int x)
 {
-	CageNum = x;
+	cage_num = x;
 }
 
 /** @brief Menambahkan Habitat
-  *	@param H Habitat
+  *	@param h Habitat
   */
-void Cage::AddHabitat(Habitat* H)
+void Cage::AddHabitat(Habitat* h)
 {
-	H->SetCageNum(CageNum);
-	LuasCage++;
-	P[PointerPoint].SetX(H->getx());
-	P[PointerPoint].SetY(H->gety());
-	PointerPoint++;
+	h->SetCageNum(cage_num);
+	luas_cage++;
+	p[pointer_point].SetX(h->getx());
+	p[pointer_point].SetY(h->gety());
+	pointer_point++;
 }
 
 /** @brief Menunjukkan Hewan
@@ -160,9 +160,9 @@ void Cage::AddHabitat(Habitat* H)
 void Cage::ShowHewan()
 {
 	int i;
-	for(i = 0; i < PointerAnimal; i++)
+	for(i = 0; i < pointer_animal; i++)
 	{
-		AniData[i]->GetExperience();
+		ani_data[i]->GetExperience();
 	}
 }
 
@@ -173,9 +173,9 @@ int Cage::JumlahMakanKandang()
 {
 	// rumus herbifor beda dengan karnivor dengan omnifor
 	int temp = 0;
-	for (int i=0; i<PointerAnimal; i++)
+	for (int i=0; i<pointer_animal; i++)
 	{
-		temp = temp + AniData[i]->GetFoodNum();
+		temp = temp + ani_data[i]->GetFoodNum();
 	}
 	return temp;
 }
@@ -186,8 +186,8 @@ int Cage::JumlahMakanKandang()
 void Cage::render(char** cc)
 {
 	// lakukan penimpaan animal
-	for(int i = 0; i < PointerAnimal; i++)
+	for(int i = 0; i < pointer_animal; i++)
 	{
-		cc[AniLoc[i].gety()][AniLoc[i].getx()] = AniData[i]->GetRender();
+		cc[ani_loc[i].gety()][ani_loc[i].getx()] = ani_data[i]->GetRender();
 	}
 }

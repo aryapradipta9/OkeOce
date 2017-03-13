@@ -16,19 +16,19 @@ Cell::Cell():size_x(50),size_y(50)
 	{
 		pos[i]=new Point*[size_x];
 	}
-	EmptyPos = size_x * size_y;
-	adaEntry = false;
-	adaExit = false;
-	SizeCage = 50;
-	C = new Cage*[SizeCage];
-	TopCage = 0;
+	empty_pos = size_x * size_y;
+	ada_entry = false;
+	ada_exit = false;
+	size_cage = 50;
+	c = new Cage*[size_cage];
+	top_cage = 0;
 }
 /** @brief Constructor
   * @param x ukuran x
   * @param y ukuran y
-  * @param jumlahkandang
+  * @param jumlah_kandang
   */
-Cell::Cell(int x, int y, int jumlahkandang):size_x(x),size_y(y)
+Cell::Cell(int x, int y, int jumlah_kandang):size_x(x),size_y(y)
 {
 	//KAMUS
 	int i;
@@ -39,12 +39,12 @@ Cell::Cell(int x, int y, int jumlahkandang):size_x(x),size_y(y)
 	{
 		pos[i]=new Point*[size_x];
 	}
-	EmptyPos = size_x * size_y;
-	adaEntry = false;
-	adaExit = false;
-	SizeCage = jumlahkandang;
-	C = new Cage*[SizeCage];
-	TopCage = 0;
+	empty_pos = size_x * size_y;
+	ada_entry = false;
+	ada_exit = false;
+	size_cage = jumlah_kandang;
+	c = new Cage*[size_cage];
+	top_cage = 0;
 }
 
 /** @brief Destructor
@@ -56,31 +56,31 @@ Cell::~Cell() {}
   */
 void Cell::SetCage(Cage* cg)
 {
-	C[TopCage] = cg;
-	C[TopCage]->SetCageNum(TopCage);
-	TopCage++;
+	c[top_cage] = cg;
+	c[top_cage]->SetCageNum(top_cage);
+	top_cage++;
 }
 /** @brief SetCellTarge
-  * @param F Nawn
+  * @param f Nawn
   */
-void Cell::SetCellTarget(Point* F)
+void Cell::SetCellTarget(Point* f)
 {
 	// harusnya ada pengaman tapi aing gatau gimana
-	// asumsi F sudah berisi koordinat yang tepat
-	pos[F->gety()][F->getx()] = F;
-	EmptyPos--;
+	// asumsi f sudah berisi koordinat yang tepat
+	pos[f->gety()][f->getx()] = f;
+	empty_pos--;
 }
 /** @brief SetEntrace
   * @param ent Nawn
   */
 void Cell::SetEntrance(Entrance* ent)
 {
-	if (!adaEntry)
+	if (!ada_entry)
 	{
 		pos[ent->gety()][ent->getx()] = ent;
-		Masuk = ent;
-		adaEntry = true;
-		EmptyPos--;
+		masuk = ent;
+		ada_entry = true;
+		empty_pos--;
 	}
 }
 /** @brief SetExit
@@ -88,12 +88,12 @@ void Cell::SetEntrance(Entrance* ent)
   */
 void Cell::SetExit(Exit* ext)
 {
-	if (!adaExit)
+	if (!ada_exit)
 	{
 		pos[ext->gety()][ext->getx()] = ext;
-		Keluar = ext;
-		adaExit = true;
-		EmptyPos--;
+		keluar = ext;
+		ada_exit = true;
+		empty_pos--;
 	}
 }
 /** @brief IsComplete. Semua posisi sudah terisi
@@ -102,28 +102,28 @@ void Cell::SetExit(Exit* ext)
 bool Cell::IsComplete()
 // cek apakah semua pos telah terisi
 {
-	return (((EmptyPos == 0) && adaEntry && adaExit) ? true : false);
+	return (((empty_pos == 0) && ada_entry && ada_exit) ? true : false);
 }
 /** @brief Dapat Jalan masuk
   * @return Jalan masuk
   */
 Entrance* Cell::GetEntrance()
 {
-	return (Masuk);
+	return (masuk);
 }
 /** @brief Dapat Jalan keluar
   * @return Jalan keluar
   */
 Exit* Cell::GetExit()
 {
-	return (Keluar);
+	return (keluar);
 }
 /** @brief Melihatkan kandang
   * @param nomor kandang
   */
 void Cell::ViewCage(int NumCage)
 {
-	C[NumCage]->ShowHewan();
+	c[NumCage]->ShowHewan();
 }
 /** @brief Gambar
   * @param rd Nawn
@@ -138,12 +138,12 @@ void Cell::Gambar(Point* rd)
 	{
 		for(j=0; j<size_x; j++)
 		{
-			pos[i][j]->render(cc);
+			pos[i][j]->Render(cc);
 		}
 	}
-	for(i=0; i<TopCage; i++)
+	for(i=0; i<top_cage; i++)
 	{
-		C[i]->render(cc);
+		c[i]->Render(cc);
 	}
 	cc[rd->gety()][rd->getx()]='Z';
 	for(i=0; i<size_y; i++)
@@ -161,7 +161,7 @@ void Cell::Gambar(Point* rd)
 void Cell::SeeHabitat(Point* rd)
 {
 	Habitat* h = dynamic_cast<Habitat*>(rd);
-	C[h->GetCageNum()]->ShowHewan();
+	c[h->GetCageNum()]->ShowHewan();
 }
 /** @brief Cek sekitar
   * @param rd Nawn
@@ -204,8 +204,8 @@ void Cell::Tour()
 	//awal di Entrance
 	Point* rd;
 	char i;
-	rd = Masuk;
-	while (rd != Keluar)
+	rd = masuk;
+	while (rd != keluar)
 	{
 		clearScreen();
 		cout << "Peta Jaki Zoo" << endl;
@@ -283,7 +283,7 @@ Point* Cell::MoveBawah(Point* rd)
   * @param y posisi y
   *	@return point
   */
-Point* Cell::getdata(int x,int y)
+Point* Cell::GetData(int x,int y)
 {
 	return(pos[y][x]);
 }	//type cell di x dan y
@@ -291,7 +291,7 @@ Point* Cell::getdata(int x,int y)
   * @param x posisi x
   * @param y posisi y
   */
-void Cell::setdata(int x, int y,Point* t) //set type pada cell x dan y
+void Cell::SetData(int x, int y,Point* t) //set type pada cell x dan y
 {
 	pos[x][y]=t;
 }
@@ -303,9 +303,9 @@ int Cell::JumlahMakanCell()
 {
 	int i, temp;
 	temp = 0;
-	for (i = 0; i < TopCage; i++)
+	for (i = 0; i < top_cage; i++)
 	{
-		temp = temp + C[i]->JumlahMakanKandang();
+		temp = temp + c[i]->JumlahMakanKandang();
 	}
 	return temp;
 }
@@ -320,12 +320,12 @@ void Cell::Gambar()
 	{
 		for(j=0; j<size_x; j++)
 		{
-			pos[i][j]->render(cc);
+			pos[i][j]->Render(cc);
 		}
 	}
-	for(i=0; i<TopCage; i++)
+	for(i=0; i<top_cage; i++)
 	{
-		C[i]->render(cc);
+		c[i]->Render(cc);
 	}
 	for(i=0; i<size_y; i++)
 	{

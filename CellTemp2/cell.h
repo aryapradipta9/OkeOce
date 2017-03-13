@@ -14,9 +14,9 @@ class Cell{
 		/** @brief Constructor
 		  * @param x ukuran x
 		  * @param y ukuran y
-		  * @param jumlahkandang
+		  * @param jumlah_kandang
 		  */
-		Cell(int x, int y, int jumlahkandang);
+		Cell(int x, int y, int jumlah_kandang);
 
 		/** @brief Destructor
 		  */
@@ -27,9 +27,9 @@ class Cell{
 		  */
 		void SetCage(Cage* cg);
 		/** @brief SetCellTarge
-		  * @param F Nawn
+		  * @param f Nawn
 		  */
-		void SetCellTarget(Point* F);
+		void SetCellTarget(Point* f);
 		/** @brief SetEntrace
 		  * @param ent Nawn
 		  */
@@ -53,7 +53,7 @@ class Cell{
 		/** @brief Melihatkan kandang
 		  * @param nomor kandang
 		  */
-		void ViewCage(int NumCage);
+		void ViewCage(int num_cage);
 
 		/** @brief Gambar tanpa param
 		  */
@@ -105,22 +105,22 @@ class Cell{
 		/** @brief ukuran x
 		  *	@return size x
 		  */
-		int getsize_x();	//ukuran x cell saat ini
+		int GetSizeX();	//ukuran x cell saat ini
 		/** @brief ukuran y
 		  *	@return size y
 		  */
-		int getsize_y();	//ukuran y cell saat ini
+		int GetSizeY();	//ukuran y cell saat ini
 		/** @brief data di x,y
 		  * @param x posisi x
 		  * @param y posisi y
 		  *	@return point
 		  */
-		Point* getdata(int x,int y);
+		Point* GetData(int x,int y);
 		/** @brief set data di x,y
 		  * @param x posisi x
 		  * @param y posisi y
 		  */
-		void setdata(int x, int y,Point* t);
+		void SetData(int x, int y,Point* t);
 
 		/** @brief Total kebutuhan makanan dalam zoo
 		  *	@return jumlah makan
@@ -139,30 +139,30 @@ class Cell{
 		Point*** pos;
 		/**	Pos yang kosong
 		  */
-		int EmptyPos;
+		int empty_pos;
 		/**	Exit
 		  */
-		Exit* Keluar;
+		Exit* keluar;
 		/**	ada Exit
 		  */
-		bool adaExit;
-		/**	Masuk
+		bool ada_exit;
+		/**	masuk
 		  */
-		Entrance* Masuk;
-		/**	Ada Masuk
+		Entrance* masuk;
+		/**	Ada masuk
 		  */
-		bool adaEntry;
+		bool ada_entry;
 
     // array of Cage
 		/**	Array Kandang
 		  */
-		Cage** C;
+		Cage** c;
 		/**	Nawn
 		  */
-		int TopCage;
+		int top_cage;
 		/**	Ukuran Kandang
 		  */
-		int SizeCage;
+		int size_cage;
 
 };
 #endif
