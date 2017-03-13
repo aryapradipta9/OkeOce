@@ -7,6 +7,7 @@ using namespace std;
 Whale::Whale()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Whale::Whale()
 	Experience = "MASSIVE SEA-CREATURE";
 	Berat = 1500000;
 	AniChar = 'r';
-	Famili = 'Cetacea';
+	Famili = "Cetacea";
 	JenisMakanan = 2;
 	Type[2] = 1;
 	TopEnemy = 0;

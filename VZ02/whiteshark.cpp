@@ -7,6 +7,7 @@ using namespace std;
 WhiteShark::WhiteShark()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -19,7 +20,7 @@ WhiteShark::WhiteShark()
 	TopEnemy = 0;
 	SetEnemy('q');
 	SetEnemy('s');
-	Famili = 'Selachimorpha';
+	Famili = "Selachimorpha";
 	JenisMakanan = 2;
 	Type[2] = 1;
 

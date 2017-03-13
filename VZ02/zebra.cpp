@@ -7,6 +7,7 @@ using namespace std;
 Zebra::Zebra()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Zebra::Zebra()
 	Experience = "Its like a horse but black and white";
 	Berat = 3500;
 	AniChar = 'f';
-	Famili = 'Equidae';
+	Famili = "Equidae";
 	JenisMakanan = 1;
 	Type[0] = 1;
 	TopEnemy = 0;

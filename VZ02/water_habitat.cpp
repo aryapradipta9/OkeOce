@@ -4,14 +4,14 @@
   * @param posx posisi x
   * @param posy posisi y
   */
-WaterHabitat::WaterHabitat()//ctor{}
+WaterHabitat::WaterHabitat(){}//ctor
 /**	@brief Destructor
   */
 WaterHabitat::~WaterHabitat(){}//dtor
 /**	@brief render nawn
   *	@param cc nawnnawn
   */
-void WaterHabitat::render()
+char WaterHabitat::GetRender()
 {
 	return('$');
 }

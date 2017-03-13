@@ -7,6 +7,7 @@ using namespace std;
 Pari::Pari()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Pari::Pari()
 	Experience = "Wide Fish";
 	Berat = 1600;
 	AniChar = 'q';
-	Famili = 'Myliobatidae';
+	Famili = "Myliobatidae";
 	JenisMakanan = 3;
 	Type[2] = 1;
 	TopEnemy = 0;

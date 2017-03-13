@@ -1,38 +1,39 @@
 #include <string>
 #include <iostream>
-#include "eagle.h"
+#include "penguin.h"
 using namespace std;
 /** @brief Constructor
   */
-Eagle::Eagle()
+Penguin::Penguin()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
 	}
 	EnemyChar = new char[5];
-	Species = "Aquila chrysaetos";
-	Experience = "screeech!";
-	Berat = 60;
-	AniChar = 'j';
-	Famili = 'Accipitridae';
+	Species = "Aptenodytes forsteri";
+	Experience = "It's Pengy";
+	Berat = 350;
+	AniChar = 'k';
+	Famili = "Spheniscidae";
 	JenisMakanan = 2;
-	Type[1] = 1;
+	Type[2] = 1;
 	TopEnemy = 0;
 	SetEnemy('Y');
 	SetEnemy('X');
 }
 /** @brief Destructor
   */
-Eagle::~Eagle()
+Penguin::~Penguin()
 {
 	delete [] Type;
 	delete [] EnemyChar;
 }
 /** @brief Komunikasi dengan hewan
   */
-void Eagle::GetExperience()
+void Penguin::GetExperience()
 {
 	cout << "Hewan ini tinggal di : ";
 	if (Type[0]==1) cout << "darat ";
@@ -45,7 +46,7 @@ void Eagle::GetExperience()
 /** @brief Jumlah makanan
   *	@return Jumlah makanan
   */
-int Eagle::GetFoodNum()
+int Penguin::GetFoodNum()
 {
 	return (Berat * 0.2);
 }
@@ -53,7 +54,7 @@ int Eagle::GetFoodNum()
 /** @brief Print karakter
 	*	@return char
 	*/
-char Eagle::GetRender()
+char Penguin::GetRender()
 {
 	return (AniChar);
 }
@@ -61,7 +62,7 @@ char Eagle::GetRender()
 /** @brief Set karakter hewan
 	*	@param cc Karakter hewan tsb
 	*/
-void Eagle::SetEnemy(char cc)
+void Penguin::SetEnemy(char cc)
 {
 	EnemyChar[TopEnemy] = cc;
 	TopEnemy++;
@@ -70,7 +71,7 @@ void Eagle::SetEnemy(char cc)
 /** @brief Ambil list musuh
 	*	@return List Musuh
 	*/
-char* Eagle::GetEnemy()
+char* Penguin::GetEnemy()
 {
 	return EnemyChar;
 }

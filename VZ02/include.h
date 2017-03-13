@@ -18,3 +18,7 @@
 #include "whale.h"
 #include "whiteshark.h"
 #include "zebra.h"
+#include "road.h"
+#include "land_habitat.h"
+#include "water_habitat.h"
+#include "air_habitat.h"

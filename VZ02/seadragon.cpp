@@ -7,6 +7,7 @@ using namespace std;
 Eagle::Eagle()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Eagle::Eagle()
 	Experience = "screeech!";
 	Berat = 60;
 	AniChar = 'j';
-	Famili = 'Accipitridae';
+	Famili = "Accipitridae";
 	JenisMakanan = 2;
 	Type[1] = 1;
 	TopEnemy = 0;

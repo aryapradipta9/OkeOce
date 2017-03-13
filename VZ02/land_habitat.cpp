@@ -4,7 +4,7 @@
   * @param posx posisi x
   * @param posy posisi y
   */
-LandHabitat::LandHabitat()//ctor{}
+LandHabitat::LandHabitat(){}//ctor
 /**	@brief Destructor
   */
 LandHabitat::~LandHabitat(){}//dtor

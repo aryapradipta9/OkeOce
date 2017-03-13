@@ -7,6 +7,7 @@ using namespace std;
 Reindeer::Reindeer()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Reindeer::Reindeer()
 	Experience = "It's a Reindeer";
 	Berat = 1700;
 	AniChar = 'c';
-	Famili = 'Cervidae';
+	Famili = "Cervidae";
 	JenisMakanan = 1;
 	Type[0] = 1;
 	TopEnemy = 0;

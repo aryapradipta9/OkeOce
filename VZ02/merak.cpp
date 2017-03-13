@@ -7,6 +7,7 @@ using namespace std;
 Merak::Merak()
 {
 	Type = new int[3];
+	int i;
 	for(i=0;i<3;i++)
 	{
 		Type[i]=0;
@@ -16,7 +17,7 @@ Merak::Merak()
 	Experience = "Rainbow Bird";
 	Berat = 50;
 	AniChar = 'l';
-	Famili = 'Phasianidae';
+	Famili = "Phasianidae";
 	JenisMakanan = 3;
 	Type[0] = 1;
 	TopEnemy = 0;
