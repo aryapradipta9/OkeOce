@@ -1,0 +1,54 @@
+CC = g++
+DEBUG = -g
+CFLAGS = -Wall -c $(DEBUG)
+LFLAGS = -Wall $(DEBUG)
+
+main:
+
+accipitridae.o: accipitridae.cpp accipitridae.h air_animal.h
+  $(CC) $(CFLAGS) accipitridae.cpp
+
+african_elephant.o: african_elephant.cpp african_elephant.h elephantidae.h herbifora.h
+  $(CC) $(CFLAGS) african_elephant.cpp
+
+air_animal.o: air_animal.cpp air_animal.h animal.h
+  $(CC) $(CFLAGS) air_animal.cpp
+
+animal.o: animal.cpp animal.h
+  $(CC) $(CFLAGS) animal.cpp
+
+air_habitat.o: air_habitat.cpp air_habitat.h habitat.h
+  $(CC) $(CFLAGS) air_habitat.cpp
+
+anoa.o: anoa.cpp anoa.h bovidae.h herbivora.h
+  $(CC) $(CFLAGS) anoa.cpp
+
+bear.o: bear.cpp bear.h ursoidea.h omnivora.h
+  $(CC) $(CFLAGS) bear.cpp
+
+beonias.o: beonias.cpp beonias.h psittacifurmes.h herbivora.h
+  $(CC) $(CFLAGS) beonias.cpp
+
+bovidae.o: bovidae.cpp bovidae.h land_animal.h
+  $(CC) $(CFLAGS) bovidae.cpp
+
+burung_gereja.o: burung_gereja.cpp burung_gereja.h passeridae.h herbifora.h
+  $(CC) $(CFLAGS) burung_gereja.cpp
+
+cage.o: cage.cpp cage.h animal.h point.h habitat.h
+  $(CC) $(CFLAGS) cage.cpp
+
+animal.o: animal.cpp animal.h
+  $(CC) $(CFLAGS) animal.cpp
+
+air_habitat.o: air_habitat.cpp air_habitat.h habitat.h
+  $(CC) $(CFLAGS) air_habitat.cpp
+
+anoa.o: anoa.cpp anoa.h bovidae.h herbivora.h
+  $(CC) $(CFLAGS) anoa.cpp
+
+bear.o: bear.cpp bear.h ursoidea.h omnivora.h
+  $(CC) $(CFLAGS) bear.cpp
+
+beonias.o: beonias.cpp beonias.h psittacifurmes.h herbivora.h
+  $(CC) $(CFLAGS) beonias.cpp
