@@ -1,3 +1,71 @@
 # OkeOce
-Arya biji naga
-Biji Arya meledak
+1080p
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+720p
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+360p
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+144p
+ppppppppppppppppppppppp
+ppppppppppppppppppppppp
+ppppppppppppppppppppppp
+ppppppppppppppppppppppp
+ppppppppppppppppppppppp
+ppppppppppppppppppppppp
+30fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+60fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+720fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
+fps fps fps fps fps fps fps fps fps fps
