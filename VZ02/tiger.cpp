@@ -16,7 +16,7 @@ Tiger::Tiger()
 	Species = "Panthera tigris tigris";
 	Experience = "ROAR!";
 	Berat = 2000;
-	SetEnemy('K');
+	//SetEnemy('K');
 	AniChar = 'E';
 	Type[0] = 1;
 	Famili = "Felidae";

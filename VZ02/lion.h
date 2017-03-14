@@ -4,8 +4,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-class Lion
-{
+class Lion{
 public:
 	/**	@brief Inisialisasi Hewan
 	  */

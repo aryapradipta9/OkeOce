@@ -16,7 +16,7 @@ Lion::Lion()
 	Species = "Panthera leo";
 	Experience = "ROAAARRR!";
 	Berat = 1800;
-	SetEnemy('K');
+	//SetEnemy('K');
 	AniChar = 'F';
 	Type[0] = 1;
 	Famili = "Felidae";

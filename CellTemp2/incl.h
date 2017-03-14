@@ -1,6 +1,3 @@
-// file include
-// taruh semua .h disini biar sekali include
-
 #include "accipitridae.h"
 #include "african_elephant.h"
 #include "air_animal.h"

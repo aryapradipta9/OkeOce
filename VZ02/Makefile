@@ -4,11 +4,14 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-main: $(OBJS)
+
+main : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main
 
-main.o: main.cpp africanelephant.h air_habitat.h anoa.h bear.h eagle.h girrafe.h gorilla.h indianphyton.h land_habitat.h lion.h merak.h panda.h pari.h penguin.h reindeer.h rhino.h road.h seadragon.h squirrelmonkey.h tiger.h water_habitat.h whale.h whiteshark.h zebra.h
+main.o : main.cpp africanelephant.h air_habitat.h anoa.h bear.h eagle.h girrafe.h gorilla.h indianphyton.h land_habitat.h lion.h merak.h panda.h pari.h penguin.h reindeer.h rhino.h road.h seadragon.h squirrelmonkey.h tiger.h water_habitat.h whale.h whiteshark.h zebra.h
 	$(CC) $(CFLAGS) main.cpp
+
+
 africanelephant.o: africanelephant.cpp africanelephant.h
 	$(CC) $(CFLAGS) africanelephant.cpp
 
