@@ -116,7 +116,7 @@ int main(){
   AfricanElephant gj;
   ArrayHabitat[1][4] = gj.GetRender();
   FoodNum[1][4] = gj.GetFoodNum();
-
+  cout << gj.GetExperience()<<endl;
   Anoa an;
   ArrayHabitat[2][5] = an.GetRender();
   FoodNum[2][5] = an.GetFoodNum();

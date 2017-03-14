@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-class Girrafe 
+class Girrafe
 {
 public:
 	/**	@brief Inisialisasi Hewan
@@ -15,7 +15,7 @@ public:
 	~Girrafe();
 	/** @brief Komunikasi dengan hewan
 		  */
-	void GetExperience();
+	string GetExperience();
 	/** @brief Jumlah makanan
 	  *	@return Jumlah makan
 	  */
