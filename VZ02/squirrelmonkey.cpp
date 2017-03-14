@@ -30,7 +30,7 @@ SquirrelMonkey::~SquirrelMonkey()
 }
 /** @brief Komunikasi dengan hewan
   */
-void SquirrelMonkey::GetExperience()
+string SquirrelMonkey::GetExperience()
 {
 	string str;
 	str = "Hewan ini tinggal di : ";

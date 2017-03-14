@@ -31,15 +31,17 @@ Tiger::~Tiger()
 }
 /** @brief Komunikasi dengan hewan
   */
-void Tiger::GetExperience()
+string Tiger::GetExperience()
 {
-	cout << "Hewan ini tinggal di : ";
-	if (Type[0]==1) cout << "darat ";
-	if (Type[1]==1) cout << "udara ";
-	if (Type[2]==1) cout << "air ";
-	cout << endl;
-	cout << "Hewan ini tergabung di famili "<< Famili << "dan dengan nama spesies "<< Species << endl;
-	cout << Experience << endl;
+	string str;
+	str = "Hewan ini tinggal di : ";
+	if (Type[0]==1) str = str +  "darat ";
+	if (Type[1]==1) str = str +  "udara ";
+	if (Type[2]==1) str = str +  "air ";
+	str = str +  '\n';
+	str = str +  "Hewan ini tergabung di famili " +  Famili +  "dan dengan nama spesies " + Species +  '\n';
+	str = str +  Experience  +  '\n';
+	return str;
 }
 /** @brief Jumlah makanan
   *	@return Jumlah makanan

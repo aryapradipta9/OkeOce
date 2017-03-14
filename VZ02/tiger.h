@@ -14,7 +14,7 @@ public:
 	~Tiger();
 	/** @brief Komunikasi dengan hewan
 		  */
-	void GetExperience();
+	string GetExperience();
 	/** @brief Jumlah makanan
 	  *	@return Jumlah makan
 	  */

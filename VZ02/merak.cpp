@@ -32,7 +32,7 @@ Merak::~Merak()
 }
 /** @brief Komunikasi dengan hewan
   */
-void Merak::GetExperience()
+string Merak::GetExperience()
 {
 	string str;
 	str = "Hewan ini tinggal di : ";

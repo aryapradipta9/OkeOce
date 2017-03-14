@@ -33,7 +33,7 @@ Penguin::~Penguin()
 }
 /** @brief Komunikasi dengan hewan
   */
-void Penguin::GetExperience()
+string Penguin::GetExperience()
 {
 	string str;
 	str = "Hewan ini tinggal di : ";
