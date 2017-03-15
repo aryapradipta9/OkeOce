@@ -1,0 +1,527 @@
+\hypertarget{class_cell}{}\section{Cell Class Reference}
+\label{class_cell}\index{Cell@{Cell}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cell_a394510643e8664cf12b5efaf5cb99f71}{Cell} ()\hypertarget{class_cell_a394510643e8664cf12b5efaf5cb99f71}{}\label{class_cell_a394510643e8664cf12b5efaf5cb99f71}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_cell_a884a55d8e435243137cc798aeab2ab81}{Cell} (int x, int y, int jumlahkandang)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}{$\sim$\+Cell} ()\hypertarget{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}{}\label{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_ad70276595dd9580bcb2061eee98a9d46}{Set\+Cage} (\hyperlink{class_cage}{Cage} $\ast$cg)
+\begin{DoxyCompactList}\small\item\em Set\+Cage. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_aa47f53266d2a27481fcb970def270e8d}{Set\+Cell\+Target} (\hyperlink{class_point}{Point} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Set\+Cell\+Targe. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a86e546014ede1b012beb9f9212e678f9}{Set\+Entrance} (\hyperlink{class_entrance}{Entrance} $\ast$ent)
+\begin{DoxyCompactList}\small\item\em Set\+Entrace. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a7c072eb0334e6388da600892d66cf50a}{Set\+Exit} (\hyperlink{class_exit}{Exit} $\ast$ext)
+\begin{DoxyCompactList}\small\item\em Set\+Exit. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cell_a04ab2d9a4c5762aed152d95e87e0cb66}{Is\+Complete} ()
+\begin{DoxyCompactList}\small\item\em Is\+Complete. Semua posisi sudah terisi. \end{DoxyCompactList}\item 
+\hyperlink{class_entrance}{Entrance} $\ast$ \hyperlink{class_cell_a5e1c5d15a31f158612353950542d4666}{Get\+Entrance} ()
+\begin{DoxyCompactList}\small\item\em Dapat Jalan masuk. \end{DoxyCompactList}\item 
+\hyperlink{class_exit}{Exit} $\ast$ \hyperlink{class_cell_aead10dd501dd9f079315a795954b1eb8}{Get\+Exit} ()
+\begin{DoxyCompactList}\small\item\em Dapat Jalan keluar. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a1a2b8b7070e95a4c565b862b75b776dd}{View\+Cage} (int Num\+Cage)
+\begin{DoxyCompactList}\small\item\em Melihatkan kandang. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a36b9bdb556fca04fb90e5d2279ba1cfd}{Gambar} ()\hypertarget{class_cell_a36b9bdb556fca04fb90e5d2279ba1cfd}{}\label{class_cell_a36b9bdb556fca04fb90e5d2279ba1cfd}
+
+\begin{DoxyCompactList}\small\item\em Gambar tanpa param. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a92cb17a4ec69dadd85b9d701bb4e4368}{Gambar} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Gambar dengan param. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_aabaa585f3c300a82391b8ec1f9b02174}{See\+Habitat} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Lihat \hyperlink{class_habitat}{Habitat}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a8a7d195e4956a30e418d8b75ca5b7b9a}{Check\+Surrounding} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Cek sekitar. \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_aa8c7d7ae71a6691f8231a3addbd5376c}{Tour} ()\hypertarget{class_cell_aa8c7d7ae71a6691f8231a3addbd5376c}{}\label{class_cell_aa8c7d7ae71a6691f8231a3addbd5376c}
+
+\begin{DoxyCompactList}\small\item\em Tour. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cell_a63ecfd5bb08d406d8e5013e4d2db7955}{Move\+Kiri} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Gerak Kiri. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cell_aaac410ea21c5122487bced757a4ccf05}{Move\+Kanan} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Gerak Kanan. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cell_af7e08776a9089ee75485afa99cf9741a}{Move\+Atas} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Gerak Atas. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cell_a7ec49234304539b9b74ed6b76d5417e4}{Move\+Bawah} (\hyperlink{class_point}{Point} $\ast$rd)
+\begin{DoxyCompactList}\small\item\em Gerak Bawah. \end{DoxyCompactList}\item 
+\hyperlink{class_cell_a8ca000885181236a713963c5c8bdb46f}{Cell} (const \hyperlink{class_cell}{Cell} \&)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_cell}{Cell} \& \hyperlink{class_cell_a42eb7226a9c960006f78f73d6a04f091}{operator=} (const \hyperlink{class_cell}{Cell} \&)
+\begin{DoxyCompactList}\small\item\em operator= \end{DoxyCompactList}\item 
+int \hyperlink{class_cell_acd37e1d8a072393bdaa4a12354f1eec2}{getsize\+\_\+x} ()
+\begin{DoxyCompactList}\small\item\em ukuran x \end{DoxyCompactList}\item 
+int \hyperlink{class_cell_a2a086074c55ff980bd5a0d08f40cffa9}{getsize\+\_\+y} ()
+\begin{DoxyCompactList}\small\item\em ukuran y \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cell_afd9e33b00118abcea4dda009a641b00d}{getdata} (int x, int y)
+\begin{DoxyCompactList}\small\item\em data di x,y \end{DoxyCompactList}\item 
+void \hyperlink{class_cell_a7266e7f6752c1dd5a61242c390cb95b8}{setdata} (int x, int y, \hyperlink{class_point}{Point} $\ast$t)
+\begin{DoxyCompactList}\small\item\em set data di x,y \end{DoxyCompactList}\item 
+int \hyperlink{class_cell_ad1c6c85484bcc0a3d833fc2584d6e12d}{Jumlah\+Makan\+Cell} ()
+\begin{DoxyCompactList}\small\item\em Total kebutuhan makanan dalam zoo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{class_cell_af80d7dad162978ba5aa1ff3fca5f632e}{size\+\_\+x}
+\item 
+const int \hyperlink{class_cell_a9d3a8fb3bdc4e5424e096230a62651e1}{size\+\_\+y}
+\item 
+\hyperlink{class_point}{Point} $\ast$$\ast$$\ast$ \hyperlink{class_cell_aa7701803ec8b42b42c47bc95c2e74a8a}{pos}
+\item 
+int \hyperlink{class_cell_a10ad8313b9ae378e9a75ad500eac457f}{Empty\+Pos}
+\item 
+\hyperlink{class_exit}{Exit} $\ast$ \hyperlink{class_cell_af51c25bd1f194801e7bea0f98d002dc4}{Keluar}
+\item 
+bool \hyperlink{class_cell_a7330f05298f6f5e73f1eaec9b56c8697}{ada\+Exit}
+\item 
+\hyperlink{class_entrance}{Entrance} $\ast$ \hyperlink{class_cell_a75f27b85e6ce241c3cf231a020ffd95b}{Masuk}
+\item 
+bool \hyperlink{class_cell_a551d038831adda94e1dfe69343aec517}{ada\+Entry}
+\item 
+\hyperlink{class_cage}{Cage} $\ast$$\ast$ \hyperlink{class_cell_a29c22aa957af682cf8727f4131bb326b}{C}
+\item 
+int \hyperlink{class_cell_a07fcbd02fd8a0363a9c0166a2df62e4c}{Top\+Cage}
+\item 
+int \hyperlink{class_cell_a21f64b557520adc51e3182516a4e2b39}{Size\+Cage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Cell(int x, int y, int jumlahkandang)}{Cell(int x, int y, int jumlahkandang)}}]{\setlength{\rightskip}{0pt plus 5cm}Cell\+::\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{jumlahkandang}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a884a55d8e435243137cc798aeab2ab81}{}\label{class_cell_a884a55d8e435243137cc798aeab2ab81}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & ukuran x \\
+\hline
+{\em y} & ukuran y \\
+\hline
+{\em jumlahkandang} & \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Cell(const Cell \&)}{Cell(const Cell &)}}]{\setlength{\rightskip}{0pt plus 5cm}Cell\+::\+Cell (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a8ca000885181236a713963c5c8bdb46f}{}\label{class_cell_a8ca000885181236a713963c5c8bdb46f}
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\&} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Cell@{Cell}!Check\+Surrounding@{Check\+Surrounding}}
+\index{Check\+Surrounding@{Check\+Surrounding}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Check\+Surrounding(\+Point $\ast$rd)}{CheckSurrounding(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Check\+Surrounding (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a8a7d195e4956a30e418d8b75ca5b7b9a}{}\label{class_cell_a8a7d195e4956a30e418d8b75ca5b7b9a}
+
+
+Cek sekitar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Gambar@{Gambar}}
+\index{Gambar@{Gambar}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Gambar(\+Point $\ast$rd)}{Gambar(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Gambar (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a92cb17a4ec69dadd85b9d701bb4e4368}{}\label{class_cell_a92cb17a4ec69dadd85b9d701bb4e4368}
+
+
+Gambar dengan param. 
+
+Gambar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & lokasi sekarang\\
+\hline
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!getdata@{getdata}}
+\index{getdata@{getdata}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{getdata(int x, int y)}{getdata(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} $\ast$ Cell\+::getdata (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_afd9e33b00118abcea4dda009a641b00d}{}\label{class_cell_afd9e33b00118abcea4dda009a641b00d}
+
+
+data di x,y 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & posisi x \\
+\hline
+{\em y} & posisi y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Get\+Entrance@{Get\+Entrance}}
+\index{Get\+Entrance@{Get\+Entrance}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Get\+Entrance()}{GetEntrance()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entrance} $\ast$ Cell\+::\+Get\+Entrance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a5e1c5d15a31f158612353950542d4666}{}\label{class_cell_a5e1c5d15a31f158612353950542d4666}
+
+
+Dapat Jalan masuk. 
+
+\begin{DoxyReturn}{Returns}
+Jalan masuk 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Get\+Exit@{Get\+Exit}}
+\index{Get\+Exit@{Get\+Exit}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Get\+Exit()}{GetExit()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exit} $\ast$ Cell\+::\+Get\+Exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_aead10dd501dd9f079315a795954b1eb8}{}\label{class_cell_aead10dd501dd9f079315a795954b1eb8}
+
+
+Dapat Jalan keluar. 
+
+\begin{DoxyReturn}{Returns}
+Jalan keluar 
+\end{DoxyReturn}
+\index{Cell@{Cell}!getsize\+\_\+x@{getsize\+\_\+x}}
+\index{getsize\+\_\+x@{getsize\+\_\+x}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{getsize\+\_\+x()}{getsize_x()}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::getsize\+\_\+x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_acd37e1d8a072393bdaa4a12354f1eec2}{}\label{class_cell_acd37e1d8a072393bdaa4a12354f1eec2}
+
+
+ukuran x 
+
+\begin{DoxyReturn}{Returns}
+size x 
+\end{DoxyReturn}
+\index{Cell@{Cell}!getsize\+\_\+y@{getsize\+\_\+y}}
+\index{getsize\+\_\+y@{getsize\+\_\+y}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{getsize\+\_\+y()}{getsize_y()}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::getsize\+\_\+y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a2a086074c55ff980bd5a0d08f40cffa9}{}\label{class_cell_a2a086074c55ff980bd5a0d08f40cffa9}
+
+
+ukuran y 
+
+\begin{DoxyReturn}{Returns}
+size y 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Is\+Complete@{Is\+Complete}}
+\index{Is\+Complete@{Is\+Complete}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Is\+Complete()}{IsComplete()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Cell\+::\+Is\+Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a04ab2d9a4c5762aed152d95e87e0cb66}{}\label{class_cell_a04ab2d9a4c5762aed152d95e87e0cb66}
+
+
+Is\+Complete. Semua posisi sudah terisi. 
+
+\begin{DoxyReturn}{Returns}
+true jika udah penuh 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Jumlah\+Makan\+Cell@{Jumlah\+Makan\+Cell}}
+\index{Jumlah\+Makan\+Cell@{Jumlah\+Makan\+Cell}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Jumlah\+Makan\+Cell()}{JumlahMakanCell()}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::\+Jumlah\+Makan\+Cell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_ad1c6c85484bcc0a3d833fc2584d6e12d}{}\label{class_cell_ad1c6c85484bcc0a3d833fc2584d6e12d}
+
+
+Total kebutuhan makanan dalam zoo. 
+
+\begin{DoxyReturn}{Returns}
+jumlah makan 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Move\+Atas@{Move\+Atas}}
+\index{Move\+Atas@{Move\+Atas}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Move\+Atas(\+Point $\ast$rd)}{MoveAtas(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} $\ast$ Cell\+::\+Move\+Atas (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_af7e08776a9089ee75485afa99cf9741a}{}\label{class_cell_af7e08776a9089ee75485afa99cf9741a}
+
+
+Gerak Atas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point setelah pindah 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Move\+Bawah@{Move\+Bawah}}
+\index{Move\+Bawah@{Move\+Bawah}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Move\+Bawah(\+Point $\ast$rd)}{MoveBawah(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} $\ast$ Cell\+::\+Move\+Bawah (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a7ec49234304539b9b74ed6b76d5417e4}{}\label{class_cell_a7ec49234304539b9b74ed6b76d5417e4}
+
+
+Gerak Bawah. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point setelah pindah 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Move\+Kanan@{Move\+Kanan}}
+\index{Move\+Kanan@{Move\+Kanan}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Move\+Kanan(\+Point $\ast$rd)}{MoveKanan(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} $\ast$ Cell\+::\+Move\+Kanan (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_aaac410ea21c5122487bced757a4ccf05}{}\label{class_cell_aaac410ea21c5122487bced757a4ccf05}
+
+
+Gerak Kanan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point setelah pindah 
+\end{DoxyReturn}
+\index{Cell@{Cell}!Move\+Kiri@{Move\+Kiri}}
+\index{Move\+Kiri@{Move\+Kiri}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Move\+Kiri(\+Point $\ast$rd)}{MoveKiri(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} $\ast$ Cell\+::\+Move\+Kiri (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a63ecfd5bb08d406d8e5013e4d2db7955}{}\label{class_cell_a63ecfd5bb08d406d8e5013e4d2db7955}
+
+
+Gerak Kiri. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point setelah pindah 
+\end{DoxyReturn}
+\index{Cell@{Cell}!operator=@{operator=}}
+\index{operator=@{operator=}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{operator=(const Cell \&)}{operator=(const Cell &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cell}\& Cell\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a42eb7226a9c960006f78f73d6a04f091}{}\label{class_cell_a42eb7226a9c960006f78f73d6a04f091}
+
+
+operator= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\&} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell\& 
+\end{DoxyReturn}
+\index{Cell@{Cell}!See\+Habitat@{See\+Habitat}}
+\index{See\+Habitat@{See\+Habitat}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{See\+Habitat(\+Point $\ast$rd)}{SeeHabitat(Point *rd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+See\+Habitat (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{rd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_aabaa585f3c300a82391b8ec1f9b02174}{}\label{class_cell_aabaa585f3c300a82391b8ec1f9b02174}
+
+
+Lihat \hyperlink{class_habitat}{Habitat}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rd} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Set\+Cage@{Set\+Cage}}
+\index{Set\+Cage@{Set\+Cage}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Set\+Cage(\+Cage $\ast$cg)}{SetCage(Cage *cg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Set\+Cage (
+\begin{DoxyParamCaption}
+\item[{{\bf Cage} $\ast$}]{cg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_ad70276595dd9580bcb2061eee98a9d46}{}\label{class_cell_ad70276595dd9580bcb2061eee98a9d46}
+
+
+Set\+Cage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cg} & nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Set\+Cell\+Target@{Set\+Cell\+Target}}
+\index{Set\+Cell\+Target@{Set\+Cell\+Target}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Set\+Cell\+Target(\+Point $\ast$\+F)}{SetCellTarget(Point *F)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Set\+Cell\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{F}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_aa47f53266d2a27481fcb970def270e8d}{}\label{class_cell_aa47f53266d2a27481fcb970def270e8d}
+
+
+Set\+Cell\+Targe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!setdata@{setdata}}
+\index{setdata@{setdata}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{setdata(int x, int y, Point $\ast$t)}{setdata(int x, int y, Point *t)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::setdata (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Point} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a7266e7f6752c1dd5a61242c390cb95b8}{}\label{class_cell_a7266e7f6752c1dd5a61242c390cb95b8}
+
+
+set data di x,y 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & posisi x \\
+\hline
+{\em y} & posisi y \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Set\+Entrance@{Set\+Entrance}}
+\index{Set\+Entrance@{Set\+Entrance}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Set\+Entrance(\+Entrance $\ast$ent)}{SetEntrance(Entrance *ent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Set\+Entrance (
+\begin{DoxyParamCaption}
+\item[{{\bf Entrance} $\ast$}]{ent}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a86e546014ede1b012beb9f9212e678f9}{}\label{class_cell_a86e546014ede1b012beb9f9212e678f9}
+
+
+Set\+Entrace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ent} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!Set\+Exit@{Set\+Exit}}
+\index{Set\+Exit@{Set\+Exit}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Set\+Exit(\+Exit $\ast$ext)}{SetExit(Exit *ext)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+Set\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf Exit} $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a7c072eb0334e6388da600892d66cf50a}{}\label{class_cell_a7c072eb0334e6388da600892d66cf50a}
+
+
+Set\+Exit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cell@{Cell}!View\+Cage@{View\+Cage}}
+\index{View\+Cage@{View\+Cage}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{View\+Cage(int Num\+Cage)}{ViewCage(int NumCage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::\+View\+Cage (
+\begin{DoxyParamCaption}
+\item[{int}]{Num\+Cage}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cell_a1a2b8b7070e95a4c565b862b75b776dd}{}\label{class_cell_a1a2b8b7070e95a4c565b862b75b776dd}
+
+
+Melihatkan kandang. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomor} & kandang \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Cell@{Cell}!ada\+Entry@{ada\+Entry}}
+\index{ada\+Entry@{ada\+Entry}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{ada\+Entry}{adaEntry}}]{\setlength{\rightskip}{0pt plus 5cm}bool Cell\+::ada\+Entry\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a551d038831adda94e1dfe69343aec517}{}\label{class_cell_a551d038831adda94e1dfe69343aec517}
+Ada Masuk \index{Cell@{Cell}!ada\+Exit@{ada\+Exit}}
+\index{ada\+Exit@{ada\+Exit}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{ada\+Exit}{adaExit}}]{\setlength{\rightskip}{0pt plus 5cm}bool Cell\+::ada\+Exit\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a7330f05298f6f5e73f1eaec9b56c8697}{}\label{class_cell_a7330f05298f6f5e73f1eaec9b56c8697}
+ada \hyperlink{class_exit}{Exit} \index{Cell@{Cell}!C@{C}}
+\index{C@{C}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{C}{C}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cage}$\ast$$\ast$ Cell\+::C\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a29c22aa957af682cf8727f4131bb326b}{}\label{class_cell_a29c22aa957af682cf8727f4131bb326b}
+Array Kandang \index{Cell@{Cell}!Empty\+Pos@{Empty\+Pos}}
+\index{Empty\+Pos@{Empty\+Pos}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Empty\+Pos}{EmptyPos}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::\+Empty\+Pos\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a10ad8313b9ae378e9a75ad500eac457f}{}\label{class_cell_a10ad8313b9ae378e9a75ad500eac457f}
+Pos yang kosong \index{Cell@{Cell}!Keluar@{Keluar}}
+\index{Keluar@{Keluar}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Keluar}{Keluar}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exit}$\ast$ Cell\+::\+Keluar\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_af51c25bd1f194801e7bea0f98d002dc4}{}\label{class_cell_af51c25bd1f194801e7bea0f98d002dc4}
+\hyperlink{class_exit}{Exit} \index{Cell@{Cell}!Masuk@{Masuk}}
+\index{Masuk@{Masuk}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Masuk}{Masuk}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entrance}$\ast$ Cell\+::\+Masuk\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a75f27b85e6ce241c3cf231a020ffd95b}{}\label{class_cell_a75f27b85e6ce241c3cf231a020ffd95b}
+Masuk \index{Cell@{Cell}!pos@{pos}}
+\index{pos@{pos}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{pos}{pos}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point}$\ast$$\ast$$\ast$ Cell\+::pos\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_aa7701803ec8b42b42c47bc95c2e74a8a}{}\label{class_cell_aa7701803ec8b42b42c47bc95c2e74a8a}
+type cell \index{Cell@{Cell}!size\+\_\+x@{size\+\_\+x}}
+\index{size\+\_\+x@{size\+\_\+x}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{size\+\_\+x}{size_x}}]{\setlength{\rightskip}{0pt plus 5cm}const int Cell\+::size\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_af80d7dad162978ba5aa1ff3fca5f632e}{}\label{class_cell_af80d7dad162978ba5aa1ff3fca5f632e}
+ukuran cell x \index{Cell@{Cell}!size\+\_\+y@{size\+\_\+y}}
+\index{size\+\_\+y@{size\+\_\+y}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{size\+\_\+y}{size_y}}]{\setlength{\rightskip}{0pt plus 5cm}const int Cell\+::size\+\_\+y\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a9d3a8fb3bdc4e5424e096230a62651e1}{}\label{class_cell_a9d3a8fb3bdc4e5424e096230a62651e1}
+ukuran cell y \index{Cell@{Cell}!Size\+Cage@{Size\+Cage}}
+\index{Size\+Cage@{Size\+Cage}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Size\+Cage}{SizeCage}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::\+Size\+Cage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a21f64b557520adc51e3182516a4e2b39}{}\label{class_cell_a21f64b557520adc51e3182516a4e2b39}
+Ukuran Kandang \index{Cell@{Cell}!Top\+Cage@{Top\+Cage}}
+\index{Top\+Cage@{Top\+Cage}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{Top\+Cage}{TopCage}}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::\+Top\+Cage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cell_a07fcbd02fd8a0363a9c0166a2df62e4c}{}\label{class_cell_a07fcbd02fd8a0363a9c0166a2df62e4c}
+Nawn 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cell.\+h\item 
+cell.\+cpp\end{DoxyCompactItemize}

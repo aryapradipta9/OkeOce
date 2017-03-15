@@ -1,0 +1,245 @@
+\hypertarget{class_cage}{}\section{Cage Class Reference}
+\label{class_cage}\index{Cage@{Cage}}
+Inheritance diagram for Cage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cage_a60e37f6ee39538735bddde13e91a9758}{Cage} (int \hyperlink{class_cage_a84ab0098eebdb6ce6d00a64533eb963c}{Hab\+Type}, int \hyperlink{class_cage_a4e04166edf60c708910a7b1c6d81bf3a}{Jumlah\+Animal}, int Max\+Luas\+Cage)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cage_ac7b058e3bcad6642edcc1078a393ceb8}{Add\+Animal} (\hyperlink{class_animal}{Animal} $\ast$Ani, int x, int y)
+\begin{DoxyCompactList}\small\item\em Menambah \hyperlink{class_animal}{Animal} ke point tertentu. \end{DoxyCompactList}\item 
+void \hyperlink{class_cage_a449f19d08289f70a140955a99769ae4a}{Move} ()\hypertarget{class_cage_a449f19d08289f70a140955a99769ae4a}{}\label{class_cage_a449f19d08289f70a140955a99769ae4a}
+
+\begin{DoxyCompactList}\small\item\em Gerak. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_cage_a657259499dfc23c63fc65aeaf8abbb17}{$\sim$\+Cage} ()\hypertarget{class_cage_a657259499dfc23c63fc65aeaf8abbb17}{}\label{class_cage_a657259499dfc23c63fc65aeaf8abbb17}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cage_a6cf474c9514e4ed3b344ae11548a15ad}{Set\+Cage\+Num} (int x)
+\begin{DoxyCompactList}\small\item\em Jumlah\+Cage. \end{DoxyCompactList}\item 
+int {\bfseries Get\+Cage\+Num} ()\hypertarget{class_cage_a46e5715ddcb28e5a2d7f79884f28a90a}{}\label{class_cage_a46e5715ddcb28e5a2d7f79884f28a90a}
+
+\item 
+void \hyperlink{class_cage_aec2f91bbd16b0997b787ac0cc8afa5b5}{Add\+Habitat} (\hyperlink{class_habitat}{Habitat} $\ast$H)
+\begin{DoxyCompactList}\small\item\em Menambahkan \hyperlink{class_habitat}{Habitat}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cage_ac0bc91af45c6eb9a8174c4387310348d}{Show\+Hewan} ()\hypertarget{class_cage_ac0bc91af45c6eb9a8174c4387310348d}{}\label{class_cage_ac0bc91af45c6eb9a8174c4387310348d}
+
+\begin{DoxyCompactList}\small\item\em Menunjukkan Hewan. \end{DoxyCompactList}\item 
+int \hyperlink{class_cage_a4aaadecb8628c82e3611cc3bf99df9b3}{Jumlah\+Makan\+Kandang} ()
+\begin{DoxyCompactList}\small\item\em Total Makanan. \end{DoxyCompactList}\item 
+void \hyperlink{class_cage_aabfee407ec4cff7ef83e122611244a07}{render} (char $\ast$$\ast$cc)
+\begin{DoxyCompactList}\small\item\em Menambahkan \hyperlink{class_habitat}{Habitat}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Is\+In\+Cage} (int x, int y)\hypertarget{class_cage_a72145e1ca4fc9716d09ba1bcf3ae6bf3}{}\label{class_cage_a72145e1ca4fc9716d09ba1bcf3ae6bf3}
+
+\item 
+bool {\bfseries Ada\+Animal} (int x, int y)\hypertarget{class_cage_a13297d663f6a114deeb56306756e8aa5}{}\label{class_cage_a13297d663f6a114deeb56306756e8aa5}
+
+\item 
+bool \hyperlink{class_cage_a53c42a46fc76605447aa08b7c51855c8}{Bisa\+Add\+Animal} (\hyperlink{class_animal}{Animal} $\ast$Ani, int x, int y)
+\begin{DoxyCompactList}\small\item\em Menambah \hyperlink{class_animal}{Animal}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animal}{Animal} $\ast$$\ast$ \hyperlink{class_cage_a6fa1c17b824da167225c5fe8bdba502f}{Ani\+Data}
+\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cage_acf5ff40bfeaf9b5b34b2d8e3d856f3e9}{Ani\+Loc}
+\item 
+int \hyperlink{class_cage_a4e04166edf60c708910a7b1c6d81bf3a}{Jumlah\+Animal}
+\item 
+int \hyperlink{class_cage_a84ab0098eebdb6ce6d00a64533eb963c}{Hab\+Type}
+\item 
+int \hyperlink{class_cage_ab909423b207293975f4f486849e46db7}{Pointer\+Animal}
+\item 
+\hyperlink{class_point}{Point} $\ast$ \hyperlink{class_cage_a89c2490b6f2a07413b68922ba20facb9}{P}
+\item 
+int \hyperlink{class_cage_a5a1aeb70e196f3d5c7539b8277cd89c6}{Luas\+Cage}
+\item 
+int \hyperlink{class_cage_abfa1de5ec469c33b6495d2e5343b2ac1}{Pointer\+Point}
+\item 
+int \hyperlink{class_cage_ac5a1653970d687b3c6070580c203a88e}{Cage\+Num}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cage@{Cage}!Cage@{Cage}}
+\index{Cage@{Cage}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Cage(int Hab\+Type, int Jumlah\+Animal, int Max\+Luas\+Cage)}{Cage(int HabType, int JumlahAnimal, int MaxLuasCage)}}]{\setlength{\rightskip}{0pt plus 5cm}Cage\+::\+Cage (
+\begin{DoxyParamCaption}
+\item[{int}]{habitat\+\_\+type, }
+\item[{int}]{jumlah\+\_\+animal, }
+\item[{int}]{max\+\_\+luas\+\_\+cage}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_a60e37f6ee39538735bddde13e91a9758}{}\label{class_cage_a60e37f6ee39538735bddde13e91a9758}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hab\+Type} & tipe habitat. \\
+\hline
+{\em Jumlah\+Animal.} & \\
+\hline
+{\em Max\+Luas\+Cage} & \\
+\hline
+{\em habitat\+\_\+type} & tipe habitat. \\
+\hline
+{\em jumlah\+\_\+animal.} & \\
+\hline
+{\em max\+\_\+luas\+\_\+cage} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Cage@{Cage}!Add\+Animal@{Add\+Animal}}
+\index{Add\+Animal@{Add\+Animal}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Add\+Animal(\+Animal $\ast$\+Ani, int x, int y)}{AddAnimal(Animal *Ani, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cage\+::\+Add\+Animal (
+\begin{DoxyParamCaption}
+\item[{{\bf Animal} $\ast$}]{Ani, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_ac7b058e3bcad6642edcc1078a393ceb8}{}\label{class_cage_ac7b058e3bcad6642edcc1078a393ceb8}
+
+
+Menambah \hyperlink{class_animal}{Animal} ke point tertentu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ani} & Hewan \\
+\hline
+{\em X} & posisi X \\
+\hline
+{\em Y} & posisi Y \\
+\hline
+\end{DoxyParams}
+\index{Cage@{Cage}!Add\+Habitat@{Add\+Habitat}}
+\index{Add\+Habitat@{Add\+Habitat}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Add\+Habitat(\+Habitat $\ast$\+H)}{AddHabitat(Habitat *H)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cage\+::\+Add\+Habitat (
+\begin{DoxyParamCaption}
+\item[{{\bf Habitat} $\ast$}]{H}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_aec2f91bbd16b0997b787ac0cc8afa5b5}{}\label{class_cage_aec2f91bbd16b0997b787ac0cc8afa5b5}
+
+
+Menambahkan \hyperlink{class_habitat}{Habitat}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & \hyperlink{class_habitat}{Habitat} \\
+\hline
+\end{DoxyParams}
+\index{Cage@{Cage}!Bisa\+Add\+Animal@{Bisa\+Add\+Animal}}
+\index{Bisa\+Add\+Animal@{Bisa\+Add\+Animal}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Bisa\+Add\+Animal(\+Animal $\ast$\+Ani, int x, int y)}{BisaAddAnimal(Animal *Ani, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Cage\+::\+Bisa\+Add\+Animal (
+\begin{DoxyParamCaption}
+\item[{{\bf Animal} $\ast$}]{Ani, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a53c42a46fc76605447aa08b7c51855c8}{}\label{class_cage_a53c42a46fc76605447aa08b7c51855c8}
+
+
+Menambah \hyperlink{class_animal}{Animal}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ani} & Hewan \\
+\hline
+{\em X} & posisi X \\
+\hline
+{\em Y} & posisi Y \\
+\hline
+\end{DoxyParams}
+\index{Cage@{Cage}!Jumlah\+Makan\+Kandang@{Jumlah\+Makan\+Kandang}}
+\index{Jumlah\+Makan\+Kandang@{Jumlah\+Makan\+Kandang}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Jumlah\+Makan\+Kandang()}{JumlahMakanKandang()}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Jumlah\+Makan\+Kandang (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_a4aaadecb8628c82e3611cc3bf99df9b3}{}\label{class_cage_a4aaadecb8628c82e3611cc3bf99df9b3}
+
+
+Total Makanan. 
+
+\begin{DoxyReturn}{Returns}
+Jumlah makan tiap kandang
+
+Jumlah Makan tiap Kandang 
+\end{DoxyReturn}
+\index{Cage@{Cage}!render@{render}}
+\index{render@{render}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{render(char $\ast$$\ast$cc)}{render(char **cc)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cage\+::render (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{cc}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_aabfee407ec4cff7ef83e122611244a07}{}\label{class_cage_aabfee407ec4cff7ef83e122611244a07}
+
+
+Menambahkan \hyperlink{class_habitat}{Habitat}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & Nawn \\
+\hline
+\end{DoxyParams}
+\index{Cage@{Cage}!Set\+Cage\+Num@{Set\+Cage\+Num}}
+\index{Set\+Cage\+Num@{Set\+Cage\+Num}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Set\+Cage\+Num(int x)}{SetCageNum(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cage\+::\+Set\+Cage\+Num (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cage_a6cf474c9514e4ed3b344ae11548a15ad}{}\label{class_cage_a6cf474c9514e4ed3b344ae11548a15ad}
+
+
+Jumlah\+Cage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & jumlah cage \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Cage@{Cage}!Ani\+Data@{Ani\+Data}}
+\index{Ani\+Data@{Ani\+Data}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Ani\+Data}{AniData}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animal}$\ast$$\ast$ Cage\+::\+Ani\+Data\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a6fa1c17b824da167225c5fe8bdba502f}{}\label{class_cage_a6fa1c17b824da167225c5fe8bdba502f}
+Array Hewan \index{Cage@{Cage}!Ani\+Loc@{Ani\+Loc}}
+\index{Ani\+Loc@{Ani\+Loc}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Ani\+Loc}{AniLoc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point}$\ast$ Cage\+::\+Ani\+Loc\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_acf5ff40bfeaf9b5b34b2d8e3d856f3e9}{}\label{class_cage_acf5ff40bfeaf9b5b34b2d8e3d856f3e9}
+Lokasi semua animal \index{Cage@{Cage}!Cage\+Num@{Cage\+Num}}
+\index{Cage\+Num@{Cage\+Num}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Cage\+Num}{CageNum}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Cage\+Num\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_ac5a1653970d687b3c6070580c203a88e}{}\label{class_cage_ac5a1653970d687b3c6070580c203a88e}
+Jumlahcage \index{Cage@{Cage}!Hab\+Type@{Hab\+Type}}
+\index{Hab\+Type@{Hab\+Type}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Hab\+Type}{HabType}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Hab\+Type\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a84ab0098eebdb6ce6d00a64533eb963c}{}\label{class_cage_a84ab0098eebdb6ce6d00a64533eb963c}
+Jenis \hyperlink{class_habitat}{Habitat}, 0 \+: darat, 1 \+: udara, 2 \+: air \index{Cage@{Cage}!Jumlah\+Animal@{Jumlah\+Animal}}
+\index{Jumlah\+Animal@{Jumlah\+Animal}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Jumlah\+Animal}{JumlahAnimal}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Jumlah\+Animal\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a4e04166edf60c708910a7b1c6d81bf3a}{}\label{class_cage_a4e04166edf60c708910a7b1c6d81bf3a}
+Jumlah \hyperlink{class_animal}{Animal} \index{Cage@{Cage}!Luas\+Cage@{Luas\+Cage}}
+\index{Luas\+Cage@{Luas\+Cage}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Luas\+Cage}{LuasCage}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Luas\+Cage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a5a1aeb70e196f3d5c7539b8277cd89c6}{}\label{class_cage_a5a1aeb70e196f3d5c7539b8277cd89c6}
+Luas\+Cage \index{Cage@{Cage}!P@{P}}
+\index{P@{P}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{P}{P}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point}$\ast$ Cage\+::P\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_a89c2490b6f2a07413b68922ba20facb9}{}\label{class_cage_a89c2490b6f2a07413b68922ba20facb9}
+Semua point cage berada \index{Cage@{Cage}!Pointer\+Animal@{Pointer\+Animal}}
+\index{Pointer\+Animal@{Pointer\+Animal}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Pointer\+Animal}{PointerAnimal}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Pointer\+Animal\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_ab909423b207293975f4f486849e46db7}{}\label{class_cage_ab909423b207293975f4f486849e46db7}
+Pointer.\+0 pas inisialisasi. \index{Cage@{Cage}!Pointer\+Point@{Pointer\+Point}}
+\index{Pointer\+Point@{Pointer\+Point}!Cage@{Cage}}
+\subsubsection[{\texorpdfstring{Pointer\+Point}{PointerPoint}}]{\setlength{\rightskip}{0pt plus 5cm}int Cage\+::\+Pointer\+Point\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_cage_abfa1de5ec469c33b6495d2e5343b2ac1}{}\label{class_cage_abfa1de5ec469c33b6495d2e5343b2ac1}
+Pointer\+Point 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cage.\+h\item 
+cage.\+cpp\end{DoxyCompactItemize}

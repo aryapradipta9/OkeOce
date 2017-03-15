@@ -59,7 +59,6 @@ void Cell::SetCage(Cage* cg)
 {
   C[TopCage] = cg;
   C[TopCage]->SetCageNum(TopCage);
-  cout << C[TopCage]->GetCageNum();
   TopCage++;
 }
 /** @brief SetCellTarge
@@ -156,14 +155,13 @@ void Cell::Gambar(Point* rd)
     }
     cout << endl;
   }
-}
+}*/
 /** @brief Lihat Habitat
   * @param rd Nawn
   */
 void Cell::SeeHabitat(Point* rd)
 {
   Habitat* h = dynamic_cast<Habitat*>(rd);
-  cout << h->GetCageNum() << endl;
   C[h->GetCageNum()]->ShowHewan();
 }
 /** @brief Cek sekitar
@@ -177,6 +175,7 @@ void Cell::CheckSurrounding(Point* rd)
   {
     cout << "Di atas ada hewan" << endl;
     SeeHabitat(pos[rd->GetY()-1][rd->GetX()]);
+    cout << endl;
   }
   // bawah
   if (rd->GetY()<(size_y-1))
@@ -184,6 +183,7 @@ void Cell::CheckSurrounding(Point* rd)
   {
     cout << "Di bawah ada hewan" << endl;
     SeeHabitat(pos[rd->GetY()+1][rd->GetX()]);
+    cout << endl;
   }
   // kiri
   if (rd->GetX()>0)
@@ -191,14 +191,15 @@ void Cell::CheckSurrounding(Point* rd)
   {
     cout << "Di kiri ada hewan" << endl;
     SeeHabitat(pos[rd->GetY()][rd->GetX()-1]);
+    cout << endl;
   }
-cout <<rd->GetY() << rd->GetX() << endl;
   // kanan
   if (rd->GetX()<(size_x-1))
   if(pos[rd->GetY()][rd->GetX()+1]->IsHabitat())
   {
     cout << "Di kanan ada hewan" << endl;
     SeeHabitat(pos[rd->GetY()][rd->GetX()+1]);
+    cout << endl;
   }
 }
 /** @brief Tour
@@ -209,20 +210,20 @@ void Cell::Tour()
   Point* rd;
   char i;
   rd = Masuk;
-  while (rd != Keluar)
+  //while (rd != Keluar)
   {
     clearScreen();
-    cout << "Peta Jaki Zoo" << endl;
+    cout << "Peta OkeOce Zoo" << endl;
     //Gambar(rd);
     cout << endl;
-    CheckSurrounding(rd);
+    CheckSurrounding(rd);/*
     cout <<endl<< "Pilih jalan selanjutnya : " ;
     cin >> i;
         if (i == 'l') rd = MoveKiri(rd);
         else if (i == 'r') rd = MoveKanan(rd);
         else if (i == 'u') rd = MoveAtas(rd);
         else if (i == 'd') rd = MoveBawah(rd);
-    cout << rd->GetX() << rd->GetY() << endl;
+    cout << rd->GetX() << rd->GetY() << endl;*/
   }
 }
 /** @brief Gerak Kiri
@@ -317,17 +318,14 @@ int Cell::JumlahMakanCell()
 void Cell::Gambar()
 {
   int i, j;
-  int ** cc;
-  cc = new int*[20];
-  for(i=0; i<20;i++) cc[i] = new int[20];
-  Habitat* h;
+  char ** cc;
+  cc = new char*[20];
+  for(i=0; i<20;i++) cc[i] = new char[20];
   for(i=0; i<14; i++)
   {
     for(j=0; j<15; j++)
     {
-      if (pos[i][j]->IsHabitat())
-      {h = dynamic_cast<Habitat*>(pos[i][j]);
-      cc[i][j]=h->GetCageNum();} else {cc[i][j]=9;}
+      cc[i][j]=pos[i][j]->Render();
     }
   }
 /*
@@ -343,4 +341,6 @@ void Cell::Gambar()
     }
     cout << endl;
   }
+  for(i=0; i<20;i++) delete [] cc[i];
+  delete [] cc;
 }

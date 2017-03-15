@@ -59,7 +59,6 @@ void Cage::AddAnimal(Animal* Ani,int x, int y)
     // cek apakah point terletak dalam set of point
     AniLoc[PointerAnimal].SetX(x);
     AniLoc[PointerAnimal].SetY(y);
-    cout << "masuk" << endl;
     PointerAnimal++;
   }
 } // masukkin animal ke point tertentu;
