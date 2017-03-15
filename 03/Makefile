@@ -1,4 +1,4 @@
-OBJS = main.o driver.o amphibi.o air_animal.o air_habitat.o animal.o cage.o cell.o entrance.o exit.o facility.o habitat.o herbivora.o karnivora.o land_animal.o land_habitat.o omnivora.o park.o point.o renderable.o restaurant.o road.o water_animal.o water_habitat.o
+OBJS = main.o amphibi.o air_animal.o air_habitat.o animal.o cage.o cell.o entrance.o exit.o facility.o habitat.o herbivora.o karnivora.o land_animal.o land_habitat.o omnivora.o park.o point.o renderable.o restaurant.o road.o water_animal.o water_habitat.o
 CC = g++
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
@@ -7,11 +7,8 @@ LFLAGS = -Wall $(DEBUG)
 main: $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main -std=c++11
 
-main.o: main.cpp driver.h air_animal.h air_habitat.h cell.h facility.h habitat.h road.h animal.h land_animal.h land_habitat.h amphibi.h entrance.h exit.h cage.h herbivora.h karnivora.h omnivora.h park.h point.h renderable.h restaurant.h water_animal.h water_habitat.h
+main.o: main.cpp air_animal.h air_habitat.h cell.h facility.h habitat.h road.h animal.h land_animal.h land_habitat.h amphibi.h entrance.h exit.h cage.h herbivora.h karnivora.h omnivora.h park.h point.h renderable.h restaurant.h water_animal.h water_habitat.h
 	$(CC) $(CFLAGS) main.cpp -std=c++11
-
-driver.o: driver.cpp driver.h air_animal.h air_habitat.h cell.h facility.h habitat.h road.h animal.h land_animal.h land_habitat.h amphibi.h entrance.h exit.h cage.h herbivora.h karnivora.h omnivora.h park.h point.h renderable.h restaurant.h water_animal.h water_habitat.h
-	$(CC) $(CFLAGS) driver.cpp -std=c++11
 
 amphibi.o : amphibi.cpp amphibi.h animal.h herbivora.h karnivora.h omnivora.h land_animal.h water_animal.h
 	$(CC) $(CFLAGS) amphibi.cpp -std=c++11

@@ -210,20 +210,20 @@ void Cell::Tour()
   Point* rd;
   char i;
   rd = Masuk;
-  //while (rd != Keluar)
+  while (rd != Keluar)
   {
     clearScreen();
     cout << "Peta OkeOce Zoo" << endl;
     //Gambar(rd);
     cout << endl;
-    CheckSurrounding(rd);/*
+    CheckSurrounding(rd);
     cout <<endl<< "Pilih jalan selanjutnya : " ;
     cin >> i;
         if (i == 'l') rd = MoveKiri(rd);
         else if (i == 'r') rd = MoveKanan(rd);
         else if (i == 'u') rd = MoveAtas(rd);
         else if (i == 'd') rd = MoveBawah(rd);
-    cout << rd->GetX() << rd->GetY() << endl;*/
+    cout << rd->GetX() << rd->GetY() << endl;
   }
 }
 /** @brief Gerak Kiri
