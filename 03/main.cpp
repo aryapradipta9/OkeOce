@@ -160,7 +160,7 @@ int main()
       cg->AddHabitat(lh);
     }
   }
-cout << "anjeng"<<(lh)->GetCageNum() << endl;
+
   a = new Lion();
   cg->AddAnimal(a,11,0);
   //a = new Tiger();
