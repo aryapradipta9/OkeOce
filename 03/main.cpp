@@ -148,7 +148,6 @@ int main()
   cg->AddAnimal(a,5,4);
   a = new SquirrelMonkey();
   cg->AddAnimal(a,3,2);*/
-  cg->ShowHewan();
   // bangkitkan dan isi d2
   cg = new Cage(0,4,20);
   Zoo.SetCage(cg);
