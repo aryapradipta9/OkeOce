@@ -285,7 +285,7 @@ int main()
     }
     else if (i == 3)
     {
-      //Scen2(3);
+    cout << Zoo.JumlahMakanCell() << endl;
     }
   } while (i != 4);
   return 0;
