@@ -1,0 +1,4 @@
+//Notes
+Class road adalah class yang membuat jalan dengan render '-'
+Class Crocodile adalah contoh kelas amphibi tanpa menggunakan turunan
+Class Tiger dan Lion adalah dua kelas yang memiliki famili sama tapi berbeda spesies
