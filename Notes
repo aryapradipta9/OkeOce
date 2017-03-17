@@ -1,4 +1,19 @@
 //Notes
-Class road adalah class yang membuat jalan dengan render '-'
+pada vz02, Class road adalah class yang membuat jalan dengan render '-'
+sedangkan pada vz03, class road merupakan kelas turunan dari kelas facility dan point dimana posisi x dan y disimpan dalam kelas point. Selain itu render merupakan redefine dari kelas renderable
+
 Class Crocodile adalah contoh kelas amphibi tanpa menggunakan turunan
-Class Tiger dan Lion adalah dua kelas yang memiliki famili sama tapi berbeda spesies
+
+Vz02
+Fungsi lebih banyak
+Tidak ada kelas turunan
+
+
+
+Vz03
+Fungsi lebih sedikit di kelas riil
+Ada kelas turunan
+pada vz03 untuk mengimpelentasi amphibi harus dengan multiple inheritance
+
+
+pada vz03, Class Tiger dan Lion adalah dua kelas yang memiliki famili sama tapi berbeda spesies, sedangkan pada vz02 kedua kelas tersebut merupakan kelas yang benar benar saling terpisah dan tidak saling terkait satu sama lain
