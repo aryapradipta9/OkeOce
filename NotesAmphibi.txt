@@ -1,0 +1,7 @@
+Vz02
+Fungsi lebih banyak
+Tidak ada kelas turunan
+
+Vz03
+Fungsi lebih sedikit di kelas riil
+Ada kelas turunan
